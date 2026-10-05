@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <!-- ═══════════════════ الأساسيات ═══════════════════ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- ═══════════════════ العنوان والوصف ═══════════════════ -->
+  <title>SchoolPulse</title>
+  <meta name="description" content="SchoolPulse تطبيق مدرسي ذكي يعمل بدون إنترنت. نظّم جدولك، اضبط منبهاتك، واستقبل تنبيهاتك اليومية. مجاني بالكامل، بدون إعلانات، وبدون حساب.">
+  <meta name="keywords" content="SchoolPulse, تطبيق مدرسي, جدول المدرسة, منبه المدرسة, تنبيهات مدرسية, تطبيق للطلاب, school app, student timetable, school alarm">
+  <meta name="author" content="Mohamed Hany">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Arabic">
+  <meta name="revisit-after" content="7 days">
+
+  <!-- ═══════════════════ الأيقونات ═══════════════════ -->
+  <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
+  <link rel="shortcut icon" href="icon.png" type="image/png">
+
+  <!-- ═══════════════════ اللون في شريط المتصفح ═══════════════════ -->
+  <meta name="theme-color" content="#0F172A" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)">
+
+  <!-- ═══════════════════ Canonical & Language ═══════════════════ -->
+  <link rel="canonical" href="https://techorbit-official.github.io/SchoolPulse/">
+  <link rel="alternate" hreflang="ar" href="https://techorbit-official.github.io/SchoolPulse/">
+  <link rel="alternate" hreflang="x-default" href="https://techorbit-official.github.io/SchoolPulse/">
+
+  <!-- ═══════════════════ PWA (تثبيت كتطبيق ويب) ═══════════════════ -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="application-name" content="SchoolPulse">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SchoolPulse">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="msapplication-TileColor" content="#2563EB">
+  <meta name="msapplication-TileImage" content="icon-144.png">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- ═══════════════════ Open Graph (فيسبوك، واتساب، لينكدإن) ═══════════════════ -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SchoolPulse">
+  <meta property="og:title" content="🎓 SchoolPulse — مساعدك المدرسي الذكي">
+  <meta property="og:description" content="نظّم جدولك، اضبط منبهاتك، واستقبل تنبيهاتك اليومية. تطبيق مجاني يعمل بدون إنترنت.">
+  <meta property="og:url" content="https://techorbit-official.github.io/SchoolPulse/">
+  <meta property="og:image" content="https://techorbit-official.github.io/SchoolPulse/preview.png">
+  <meta property="og:image:secure_url" content="https://techorbit-official.github.io/SchoolPulse/preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SchoolPulse — تطبيق مدرسي ذكي">
+  <meta property="og:locale" content="ar_EG">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- ═══════════════════ Twitter Card ═══════════════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@MohamedHany">
+  <meta name="twitter:creator" content="@MohamedHany">
+  <meta name="twitter:title" content="🎓 SchoolPulse — مساعدك المدرسي الذكي">
+  <meta name="twitter:description" content="نظّم جدولك، اضبط منبهاتك، واستقبل تنبيهاتك اليومية. تطبيق مجاني يعمل بدون إنترنت.">
+  <meta name="twitter:image" content="https://techorbit-official.github.io/SchoolPulse/preview.png">
+  <meta name="twitter:image:alt" content="SchoolPulse — تطبيق مدرسي ذكي">
+
+  <!-- ═══════════════════ Telegram ═══════════════════ -->
+  <meta property="telegram:channel" content="@SchoolPulse">
+  <meta name="telegram:card" content="summary_large_image">
+
+  <!-- ═══════════════════ Schema.org - MobileApplication ═══════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "SchoolPulse",
+    "description": "تطبيق مدرسي ذكي يعمل بدون إنترنت لتنظيم الجدول الدراسي والمنبهات.",
+    "operatingSystem": "Android 7.0+",
+    "applicationCategory": "EducationalApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "1"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mohamed Hany",
+      "telephone": "+201553308975"
+    },
+    "screenshot": "https://techorbit-official.github.io/SchoolPulse/screenshots/home.png",
+    "softwareVersion": "1.0.0",
+    "fileSize": "57MB",
+    "inLanguage": "ar"
+  }
+  </script>
+
+  <!-- ═══════════════════ Schema.org - Organization ═══════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SchoolPulse",
+    "url": "https://techorbit-official.github.io/SchoolPulse/",
+    "logo": "https://techorbit-official.github.io/SchoolPulse/icon-512.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+201553308947",
+      "contactType": "customer support",
+      "areaServed": "EG",
+      "availableLanguage": ["Arabic", "English"]
+    }
+  }
+  </script>
+
+  <!-- ═══════════════════ Preconnect (تسريع التحميل) ═══════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+  <!-- ═══════════════════ Preload الأصول المهمة ═══════════════════ -->
+  <link rel="preload" as="image" href="icon.png" type="image/png">
+
+  <!-- ═══════════════════ DNS Prefetch للروابط الخارجية ═══════════════════ -->
+  <link rel="dns-prefetch" href="https://drive.google.com">
+  <link rel="dns-prefetch" href="https://play.google.com">
+  <link rel="dns-prefetch" href="https://github.com">
+
+  <!-- ═══════════════════ أمان إضافي ═══════════════════ -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- ═══════════════════ منع الترجمة التلقائية ═══════════════════ -->
+  <meta name="google" content="notranslate">
+
+  <!-- ═══════════════════ Font Awesome 6 (الأيقونات) ═══════════════════ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<style>
+  /* ═══════════════════ المتغيرات ═══════════════════ */
+  :root {
+    --blue: #2563EB;
+    --purple: #7C3AED;
+    --dark-bg: #0F172A;
+    --dark-card: #1E293B;
+    --dark-card-hover: #263449;
+    --light-bg: #F8FAFC;
+    --light-card: #FFFFFF;
+    --text-dark: #0F172A;
+    --text-light: #F8FAFC;
+    --text-muted: #64748B;
+    --text-muted-dark: #94A3B8;
+    --radius: 20px;
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  [data-theme="dark"] {
+    --bg: var(--dark-bg);
+    --card: var(--dark-card);
+    --card-hover: var(--dark-card-hover);
+    --text: var(--text-light);
+    --muted: var(--text-muted-dark);
+    --border: rgba(255, 255, 255, 0.08);
+    --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+    --glow: 0 20px 60px -15px rgba(37, 99, 235, 0.5);
+  }
+
+  [data-theme="light"] {
+    --bg: var(--light-bg);
+    --card: var(--light-card);
+    --card-hover: #F1F5F9;
+    --text: var(--text-dark);
+    --muted: var(--text-muted);
+    --border: rgba(15, 23, 42, 0.08);
+    --shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.15);
+    --glow: 0 20px 60px -15px rgba(37, 99, 235, 0.35);
+  }
+
+  /* ═══════════════════ الأساسيات ═══════════════════ */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Tahoma', system-ui, -apple-system, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    transition: background var(--transition), color var(--transition);
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ═══════════════════ الشريط العلوي ═══════════════════ */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all var(--transition);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .logo-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+
+  .logo-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity var(--transition);
+  }
+
+  .nav-links a:hover { opacity: 1; }
+
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    transition: all var(--transition);
+  }
+
+  .theme-toggle:hover {
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    color: white;
+    border-color: transparent;
+    transform: scale(1.05);
+  }
+
+  /* ═══════════════════ Hero ═══════════════════ */
+  .hero {
+    padding: 80px 0 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle,
+      rgba(37, 99, 235, 0.18) 0%,
+      transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-logo {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 28px;
+    display: grid;
+    place-items: center;
+    animation: float 3s ease-in-out infinite;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 20px 40px rgba(37, 99, 235, 0.3));
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero p {
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--muted);
+    max-width: 640px;
+    margin: 0 auto 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all var(--transition);
+  }
+
+  .btn i { font-size: 18px; }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    color: white;
+    box-shadow: 0 10px 25px -8px rgba(37, 99, 235, 0.5);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px -8px rgba(37, 99, 235, 0.7);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1.5px solid var(--border);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+  }
+
+  /* ═══════════════════ الأقسام ═══════════════════ */
+  section { padding: 80px 0; }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .section-title h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+
+  .section-title p {
+    color: var(--muted);
+    font-size: 17px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* ═══════════════════ المميزات ═══════════════════ */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .feature-card {
+    background: var(--card);
+    padding: 32px 24px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--transition);
+  }
+
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+    border-color: transparent;
+    background: var(--card-hover);
+  }
+
+  .feature-card:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .feature-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: linear-gradient(135deg,
+      rgba(37, 99, 235, 0.15),
+      rgba(124, 58, 237, 0.15));
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--blue);
+  }
+
+  [data-theme="dark"] .feature-icon {
+    color: #60A5FA;
+  }
+
+  .feature-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .feature-card p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ═══════════════════ قسم التحميل ═══════════════════ */
+  .download-section {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 60px 40px;
+    text-align: center;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .download-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle,
+      rgba(124, 58, 237, 0.15) 0%,
+      transparent 70%);
+    pointer-events: none;
+  }
+
+  .download-section::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: -20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle,
+      rgba(37, 99, 235, 0.15) 0%,
+      transparent 70%);
+    pointer-events: none;
+  }
+
+  .download-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .download-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    display: grid;
+    place-items: center;
+    font-size: 36px;
+    color: white;
+    box-shadow: var(--glow);
+  }
+
+  .download-section h2 {
+    font-size: clamp(26px, 4vw, 36px);
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+
+  .download-section > .download-content > p {
+    color: var(--muted);
+    font-size: 17px;
+    max-width: 540px;
+    margin: 0 auto 36px;
+  }
+
+  .download-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all var(--transition);
+  }
+
+  .download-btn i { font-size: 20px; }
+
+  .download-btn-primary {
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    color: white;
+    box-shadow: 0 10px 25px -8px rgba(37, 99, 235, 0.6);
+  }
+
+  .download-btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -8px rgba(37, 99, 235, 0.8);
+  }
+
+  .download-btn-secondary {
+    background: var(--bg);
+    color: var(--text);
+    border: 1.5px solid var(--border);
+  }
+
+  .download-btn-secondary:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+    transform: translateY(-4px);
+  }
+
+  .download-info {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .download-info span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .download-info i { color: var(--blue); font-size: 14px; }
+
+  /* ═══════════════════ Toast Notification ═══════════════════ */
+  .toast-container {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-120%);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 24px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.5);
+    max-width: calc(100vw - 48px);
+    width: max-content;
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+                opacity 0.4s ease;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .toast-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+  }
+
+  .toast-container.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .toast-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg,
+      rgba(37, 99, 235, 0.15),
+      rgba(124, 58, 237, 0.15));
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    color: var(--blue);
+    flex-shrink: 0;
+  }
+
+  [data-theme="dark"] .toast-icon { color: #60A5FA; }
+
+  .toast-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .toast-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.3;
+  }
+
+  .toast-message {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .toast-close {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+    flex-shrink: 0;
+    transition: all var(--transition);
+    margin-right: 4px;
+  }
+
+  .toast-close:hover {
+    background: var(--border);
+    color: var(--text);
+  }
+
+  @media (max-width: 600px) {
+    .toast-container {
+      top: 16px;
+      padding: 14px 18px;
+      gap: 10px;
+    }
+
+    .toast-icon {
+      width: 38px;
+      height: 38px;
+      font-size: 16px;
+    }
+
+    .toast-title { font-size: 14px; }
+    .toast-message { font-size: 12px; }
+  }
+
+  /* ═══════════════════ عن التطبيق / المطور ═══════════════════ */
+  .developer {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 48px 32px;
+    text-align: center;
+    border: 1px solid var(--border);
+  }
+
+  .dev-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    display: grid;
+    place-items: center;
+  }
+
+  .dev-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 15px 30px rgba(37, 99, 235, 0.25));
+  }
+
+  .developer h3 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  .developer > p {
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+
+  .contacts {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border-radius: 12px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all var(--transition);
+    direction: ltr;
+  }
+
+  .contact-btn i { font-size: 16px; color: var(--blue); }
+  .contact-btn:hover i { color: white; }
+
+  .contact-btn:hover {
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+  }
+
+  .copyright {
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  /* ═══════════════════ Footer ═══════════════════ */
+  footer {
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  footer .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+
+  .footer-logo-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    display: block;
+    -webkit-text-fill-color: initial;
+  }
+
+  /* ═══════════════════ Responsive ═══════════════════ */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero { padding: 50px 0 70px; }
+    section { padding: 60px 0; }
+    .developer { padding: 32px 20px; }
+    .feature-card { padding: 24px 20px; }
+    .download-section { padding: 40px 24px; }
+    .hero-logo { width: 140px; height: 140px; }
+  }
+
+  /* ═══════════════════ Animations ═══════════════════ */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate.delay-1 { animation-delay: 0.2s; }
+  .animate.delay-2 { animation-delay: 0.4s; }
+  .animate.delay-3 { animation-delay: 0.6s; }
+</style>
+</head>
+<body data-theme="dark">
+
+<!-- ═══════════════════ الشريط العلوي ═══════════════════ -->
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <div class="logo-icon">
+          <img src="icon.png" alt="SchoolPulse" class="logo-icon-img">
+        </div>
+        <span>SchoolPulse</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#features">المميزات</a></li>
+        <li><a href="#download">التحميل</a></li>
+        <li><a href="#about">عن التطبيق</a></li>
+        <li><a href="#developer">المطور</a></li>
+      </ul>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
+        <i class="fa-solid fa-sun"></i>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════════════ Hero ═══════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-logo animate">
+      <img src="icon.png" alt="SchoolPulse" class="hero-logo-img">
+    </div>
+
+    <h1 class="animate delay-1">SchoolPulse</h1>
+    <p class="animate delay-2">
+      مساعدك المدرسي الذكي — نظّم جدولك، اضبط منبهاتك، واستقبل تنبيهاتك اليومية
+      بدون إنترنت وبأمان كامل.
+    </p>
+
+    <div class="hero-buttons animate delay-3">
+      <a href="#download" class="btn btn-primary">
+        <i class="fa-solid fa-download"></i>
+        حمّل التطبيق
+      </a>
+      <a href="#features" class="btn btn-outline">
+        <i class="fa-solid fa-rocket"></i>
+        تعرّف على المميزات
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ المميزات ═══════════════════ -->
+<section id="features">
+  <div class="container">
+    <div class="section-title">
+      <h2>مميزات التطبيق</h2>
+      <p>كل ما يحتاجه الطالب في تطبيق واحد — بدون تعقيدات</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-calendar-days"></i></div>
+        <h3>جدول مرن</h3>
+        <p>أضف حصصك الدراسية بعدد مرن (من 1 إلى 10 حصص)، وحدد أيام الدراسة والمدرس والفصل والملاحظات.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
+        <h3>منبهات حقيقية</h3>
+        <p>منبهات تعمل حتى عند إغلاق التطبيق أو قفل الهاتف. اختر الأيام، الصوت، والاهتزاز.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-bell"></i></div>
+        <h3>ربط المنبه بالجدول</h3>
+        <p>عند عمل المنبه، يظهر جدول اليوم كاملًا في الإشعار — تعرف حصصك قبل أن تبدأ يومك.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-music"></i></div>
+        <h3>أصوات مخصصة</h3>
+        <p>اختر من بين عدة نغمات، وعاينها قبل الحفظ. يمكنك إضافة المزيد بسهولة.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-globe"></i></div>
+        <h3>يعمل بدون إنترنت</h3>
+        <p>كل الوظائف تعمل محليًا — بدون اتصال، بدون حساب، بدون خادم.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
+        <h3>خصوصية كاملة</h3>
+        <p>بياناتك محفوظة على جهازك فقط. لا نجمع أي معلومات ولا نرسلها لأي مكان.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-moon"></i></div>
+        <h3>وضعان فاتح وداكن</h3>
+        <p>اختر الوضع المريح لعينيك، أو دع التطبيق يتبع إعدادات جهازك تلقائيًا.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-user"></i></div>
+        <h3>ملف الطالب</h3>
+        <p>سجّل اسمك واسم مدرستك وصورتك — تظهر في الصفحة الرئيسية كبطاقة شخصية.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ قسم التحميل ═══════════════════ -->
+<section id="download">
+  <div class="container">
+    <div class="download-section">
+      <div class="download-content">
+        <div class="download-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h2>حمّل التطبيق الآن</h2>
+        <p>التطبيق مجاني بالكامل، بدون إعلانات، وبدون حساب — حمّله وابدأ فورًا.</p>
+
+        <div class="download-buttons">
+          <!-- زر التحميل المباشر -->
+          <a href="https://yukiapi.site/file/jOnQHNOo" class="download-btn download-btn-primary" download>
+            <i class="fa-solid fa-download"></i>
+            تحميل APK مباشر
+          </a>
+
+          <!-- زر Google Play -->
+          <a href="#" id="googlePlayBtn" class="download-btn download-btn-secondary">
+            <i class="fa-brands fa-google-play"></i>
+            Google Play
+          </a>
+        </div>
+
+        <div class="download-info">
+          <span><i class="fa-solid fa-box"></i> الحجم: ~57 MB</span>
+          <span><i class="fa-brands fa-android"></i> Android 7.0+</span>
+          <span><i class="fa-solid fa-unlock"></i> مجاني بالكامل</span>
+          <span><i class="fa-solid fa-wifi"></i> يعمل بدون إنترنت</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ عن التطبيق ═══════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="section-title">
+      <h2>عن التطبيق</h2>
+      <p>SchoolPulse — مساعد مدرسي يعمل بدون إنترنت</p>
+    </div>
+
+    <div class="developer" style="max-width: 720px; margin: 0 auto;">
+      <div class="dev-avatar">
+        <img src="icon.png" alt="SchoolPulse" class="dev-avatar-img">
+      </div>
+      <h3>SchoolPulse</h3>
+      <p style="font-size: 16px; line-height: 1.9; margin-top: 20px;">
+        تطبيق مساعد مدرسي مصمم للطلاب، يساعدهم على تنظيم جدول المدرسة،
+        ضبط منبهاتهم اليومية، واستقبال تنبيهات ذكية تحتوي على جدول اليوم
+        — كل ذلك بدون الحاجة إلى اتصال بالإنترنت.
+      </p>
+
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 28px;">
+        <div style="padding: 10px 20px; border-radius: 12px; background: rgba(37, 99, 235, 0.15); color: #60A5FA; font-weight: 600; font-size: 14px;">
+          الإصدار 1.0.0
+        </div>
+        <div style="padding: 10px 20px; border-radius: 12px; background: rgba(124, 58, 237, 0.15); color: #A78BFA; font-weight: 600; font-size: 14px;">
+          Android
+        </div>
+        <div style="padding: 10px 20px; border-radius: 12px; background: rgba(37, 99, 235, 0.15); color: #60A5FA; font-weight: 600; font-size: 14px;">
+          Offline-First
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ عن المطور ═══════════════════ -->
+<section id="developer">
+  <div class="container">
+    <div class="section-title">
+      <h2>عن المطور</h2>
+      <p>من صنع مطوّر شغوف بتطوير التطبيقات المفيدة</p>
+    </div>
+
+    <div class="developer" style="max-width: 600px; margin: 0 auto;">
+      <div class="dev-avatar">
+        <img src="icon.png" alt="Mohamed Hany" class="dev-avatar-img">
+      </div>
+      <h3>Mohamed Hany</h3>
+      <p>مطوّر تطبيقات Flutter</p>
+
+      <div class="contacts">
+        <a href="tel:01553308975" class="contact-btn">
+          <i class="fa-solid fa-phone"></i>
+          01553308975
+        </a>
+        <a href="tel:01553308947" class="contact-btn">
+          <i class="fa-solid fa-phone"></i>
+          01553308947
+        </a>
+      </div>
+
+      <div class="copyright">
+        © 2026 Mohamed Hany. All rights reserved.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ Footer ═══════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-logo">
+      <img src="icon.png" alt="SchoolPulse" class="footer-logo-img">
+      <span>SchoolPulse</span>
+    </div>
+    <p>مساعدك المدرسي الذكي — يعمل بدون إنترنت</p>
+    <p style="margin-top: 12px; font-size: 13px;">
+      © 2026 Mohamed Hany. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<!-- ═══════════════════ Toast Notification ═══════════════════ -->
+<div class="toast-container" id="toast">
+  <div class="toast-icon"><i class="fa-solid fa-rocket"></i></div>
+  <div class="toast-content">
+    <div class="toast-title">قريبًا على Google Play</div>
+    <div class="toast-message">التطبيق لم يُنشر بعد — ترقّب الإطلاق قريبًا!</div>
+  </div>
+  <button class="toast-close" id="toastClose" aria-label="إغلاق">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+</div>
+
+<!-- ═══════════════════ JavaScript ═══════════════════ -->
+<script>
+  // ─── تبديل الوضع الفاتح/الداكن ───
+  const themeToggle = document.getElementById('themeToggle');
+  const body = document.body;
+  const toast = document.getElementById('toast');
+  const toastClose = document.getElementById('toastClose');
+  const googlePlayBtn = document.getElementById('googlePlayBtn');
+  let toastTimeout;
+
+  // قراءة التفضيل المحفوظ (الافتراضي داكن)
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  body.setAttribute('data-theme', savedTheme);
+  updateThemeIcon(savedTheme);
+
+  function updateThemeIcon(theme) {
+    themeToggle.innerHTML = theme === 'dark'
+      ? '<i class="fa-solid fa-sun"></i>'
+      : '<i class="fa-solid fa-moon"></i>';
+  }
+
+  themeToggle.addEventListener('click', () => {
+    const current = body.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    body.setAttribute('data-theme', next);
+    updateThemeIcon(next);
+    localStorage.setItem('theme', next);
+  });
+
+  // ─── ظهور العناصر عند التمرير ───
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll('.feature-card, .developer, .download-section').forEach((el) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+    observer.observe(el);
+  });
+
+  // ─── تمرير سلس للروابط الداخلية ───
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // ═══════════════════ Toast Notification ═══════════════════
+
+  function showToast() {
+    clearTimeout(toastTimeout);
+    toast.classList.add('show');
+    toastTimeout = setTimeout(() => {
+      toast.classList.remove('show');
+    }, 4000);
+  }
+
+  function hideToast() {
+    clearTimeout(toastTimeout);
+    toast.classList.remove('show');
+  }
+
+  googlePlayBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    showToast();
+  });
+
+  toastClose.addEventListener('click', hideToast);
+
+  document.addEventListener('click', (e) => {
+    if (!toast.contains(e.target) && e.target !== googlePlayBtn) {
+      hideToast();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') hideToast();
+  });
+</script>
+
+</body>
+</html>
