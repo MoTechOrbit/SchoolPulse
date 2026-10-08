@@ -12,7 +12,7 @@
 [![Dart](https://img.shields.io/badge/Dart-3.13+-0175C2?logo=dart&logoColor=white)](https://dart.dev)
 [![Android](https://img.shields.io/badge/Android-7.0+-3DDC84?logo=android&logoColor=white)](https://www.android.com)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.3+-7F52FF?logo=kotlin&logoColor=white)](https://kotlinlang.org)
-[![License](https://img.shields.io/badge/License-Proprietary-red.svg)](#-license)
+[![License](https://img.shields.io/badge/License-Proprietary-red.svg)](?tab=License-1-ov-file)
 
 [Features](#-features) • [Installation](#-installation) • [Screenshots](#-screenshots) • [Developer](#-developer)
 
