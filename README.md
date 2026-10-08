@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="icon.png" alt="SchoolPulse Logo" width="120" height="120">
+<img src="icons/icon.png" alt="SchoolPulse Logo" width="120" height="120">
 
 # SchoolPulse
 
