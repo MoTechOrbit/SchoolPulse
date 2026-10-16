@@ -1,37 +1,219 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+  <!-- ═══════════════════════════════════════════════════════════
+                        الأساسيات
+  ═══════════════════════════════════════════════════════════ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>SchoolPulse V2.0.0 — مساعدك المدرسي الذكي</title>
   <meta name="description" content="SchoolPulse V2.0.0 تطبيق مدرسي ذكي يعمل بدون إنترنت. جدول مدرسي، منبهات حقيقية، مساعد ذكي بالذكاء الاصطناعي، امتحانات، وجدول دروس. مجاني بالكامل.">
-  <meta name="keywords" content="SchoolPulse, تطبيق مدرسي, جدول المدرسة, منبه المدرسة, مساعد ذكي, ذكاء اصطناعي, امتحانات, جدول دروس, school app">
+  <meta name="keywords" content="SchoolPulse, تطبيق مدرسي, جدول المدرسة, منبه المدرسة, مساعد ذكي, ذكاء اصطناعي, امتحانات, جدول دروس, school app, student timetable, school alarm">
   <meta name="author" content="Mohamed Hany">
   <meta name="robots" content="index, follow">
+  <meta name="language" content="Arabic">
+  <meta name="revisit-after" content="7 days">
+  <meta name="rating" content="general">
 
+  <!-- ═══════════════════════════════════════════════════════════
+                        الأيقونات
+  ═══════════════════════════════════════════════════════════ -->
   <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="icons/icon-96.png">
   <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
   <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png">
   <link rel="shortcut icon" href="icons/icon.png" type="image/png">
 
+  <!-- ═══════════════════════════════════════════════════════════
+                        ألوان المتصفح
+  ═══════════════════════════════════════════════════════════ -->
   <meta name="theme-color" content="#0F172A" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)">
+  <meta name="msapplication-TileColor" content="#2563EB">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-tap-highlight" content="no">
 
+  <!-- ═══════════════════════════════════════════════════════════
+                        Canonical & Language
+  ═══════════════════════════════════════════════════════════ -->
   <link rel="canonical" href="https://motechorbit.github.io/SchoolPulse/">
-  <link rel="manifest" href="manifest.json">
+  <link rel="alternate" hreflang="ar" href="https://motechorbit.github.io/SchoolPulse/">
+  <link rel="alternate" hreflang="x-default" href="https://motechorbit.github.io/SchoolPulse/">
 
+  <!-- ═══════════════════════════════════════════════════════════
+                        PWA
+  ═══════════════════════════════════════════════════════════ -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="application-name" content="SchoolPulse">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SchoolPulse">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- ═══════════════════════════════════════════════════════════
+                    🟢 WhatsApp / Facebook / LinkedIn
+                    (Open Graph Protocol)
+  ═══════════════════════════════════════════════════════════ -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SchoolPulse">
   <meta property="og:title" content="🎓 SchoolPulse V2.0.0 — مساعدك المدرسي الذكي">
-  <meta property="og:description" content="الإصدار الجديد: ذكاء اصطناعي، جدول دروس، امتحانات، وأصوات مخصصة.">
+  <meta property="og:description" content="الإصدار الجديد: ذكاء اصطناعي، جدول دروس، امتحانات، وأصوات مخصصة. تطبيق مجاني يعمل بدون إنترنت.">
+  <meta property="og:url" content="https://motechorbit.github.io/SchoolPulse/">
   <meta property="og:image" content="https://motechorbit.github.io/SchoolPulse/icons/preview.png">
+  <meta property="og:image:secure_url" content="https://motechorbit.github.io/SchoolPulse/icons/preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="SchoolPulse — تطبيق مدرسي ذكي يعمل بدون إنترنت">
+  <meta property="og:locale" content="ar_EG">
+  <meta property="og:locale:alternate" content="en_US">
 
+  <!-- WhatsApp specific (يستخدم OG لكن مع تحديدات) -->
+  <meta property="og:see_also" content="https://motechorbit.github.io/SchoolPulse/">
+
+  <!-- ═══════════════════════════════════════════════════════════
+                    🐦 Twitter / X
+  ═══════════════════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@MoTechOrbit">
+  <meta name="twitter:creator" content="@MohamedHany">
+  <meta name="twitter:title" content="🎓 SchoolPulse V2.0.0 — مساعدك المدرسي الذكي">
+  <meta name="twitter:description" content="الإصدار الجديد: ذكاء اصطناعي، جدول دروس، امتحانات، وأصوات مخصصة. مجاني وبدون إنترنت.">
+  <meta name="twitter:image" content="https://motechorbit.github.io/SchoolPulse/icons/preview.png">
+  <meta name="twitter:image:alt" content="SchoolPulse — تطبيق مدرسي ذكي">
+  <meta name="twitter:image:width" content="1200">
+  <meta name="twitter:image:height" content="630">
+  <meta name="twitter:label1" content="الإصدار">
+  <meta name="twitter:data1" content="2.0.0">
+  <meta name="twitter:label2" content="المنصة">
+  <meta name="twitter:data2" content="Android">
+
+  <!-- ═══════════════════════════════════════════════════════════
+                    ✈️ Telegram
+  ═══════════════════════════════════════════════════════════ -->
+  <meta property="telegram:channel" content="@SchoolPulse">
+  <meta name="telegram:card" content="summary_large_image">
+  <meta name="telegram:title" content="🎓 SchoolPulse V2.0.0">
+  <meta name="telegram:description" content="مساعدك المدرسي الذكي — مجاني وبدون إنترنت">
+  <meta name="telegram:image" content="https://motechorbit.github.io/SchoolPulse/icons/preview.png">
+
+  <!-- ═══════════════════════════════════════════════════════════
+                    💬 Discord
+  ═══════════════════════════════════════════════════════════ -->
+  <meta property="og:site_name" content="SchoolPulse">
+  <meta name="discord:card" content="summary_large_image">
+
+  <!-- ═══════════════════════════════════════════════════════════
+                    📌 Pinterest
+  ═══════════════════════════════════════════════════════════ -->
+  <meta name="pinterest-rich-pin" content="true">
+  <meta property="og:rich_attachment" content="true">
+
+  <!-- ═══════════════════════════════════════════════════════════
+                    📸 Snapchat
+  ═══════════════════════════════════════════════════════════ -->
+  <meta property="snapchat:title" content="🎓 SchoolPulse V2.0.0">
+  <meta property="snapchat:description" content="مساعدك المدرسي الذكي">
+  <meta property="snapchat:image" content="https://motechorbit.github.io/SchoolPulse/icons/preview.png">
+
+  <!-- ═══════════════════════════════════════════════════════════
+                    💼 Slack
+  ═══════════════════════════════════════════════════════════ -->
+  <meta name="slack-app-id" content="SchoolPulse">
+
+  <!-- ═══════════════════════════════════════════════════════════
+                    🔍 Schema.org — MobileApplication
+  ═══════════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "SchoolPulse",
+    "alternateName": "SchoolPulse V2.0.0",
+    "description": "تطبيق مدرسي ذكي يعمل بدون إنترنت لتنظيم الجدول الدراسي والمنبهات، مع مساعد ذكي بالذكاء الاصطناعي.",
+    "operatingSystem": "Android 7.0+",
+    "applicationCategory": "EducationalApplication",
+    "applicationSubCategory": "School Assistant",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "1",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mohamed Hany",
+      "telephone": "+201553308975",
+      "email": "contact.techorbit.team@gmail.com"
+    },
+    "screenshot": "https://motechorbit.github.io/SchoolPulse/screenshots/home.png",
+    "softwareVersion": "2.0.0",
+    "fileSize": "60MB",
+    "inLanguage": "ar",
+    "datePublished": "2026-10-16",
+    "downloadUrl": "https://github.com/MoTechOrbit/SchoolPulse-app/releases",
+    "installUrl": "https://MoTechOrbit.github.io/SchoolPulse/"
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════════════
+                    🔍 Schema.org — Organization
+  ═══════════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MoTechOrbit",
+    "alternateName": "SchoolPulse",
+    "url": "https://motechorbit.github.io/SchoolPulse/",
+    "logo": "https://motechorbit.github.io/SchoolPulse/icons/icon-512.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+201553308947",
+      "contactType": "customer support",
+      "areaServed": "EG",
+      "availableLanguage": ["Arabic", "English"]
+    },
+    "sameAs": [
+      "https://github.com/MoTechOrbit",
+      "https://MoTechOrbit.github.io/SchoolPulse/"
+    ]
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════════════
+                    ⚡ الأداء — Preconnect / Prefetch
+  ═══════════════════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://github.com">
+  <link rel="preload" as="image" href="icons/icon.png" type="image/png">
+
+  <!-- ═══════════════════════════════════════════════════════════
+                    🎨 Font Awesome
+  ═══════════════════════════════════════════════════════════ -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- ═══════════════════════════════════════════════════════════
+                    🔒 الأمان
+  ═══════════════════════════════════════════════════════════ -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- ═══════════════════════════════════════════════════════════
+                    🚫 منع الترجمة التلقائية
+  ═══════════════════════════════════════════════════════════ -->
+  <meta name="google" content="notranslate">
 
 <style>
   :root {
