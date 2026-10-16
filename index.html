@@ -1,153 +1,45 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <!-- ═══════════════════ الأساسيات ═══════════════════ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- ═══════════════════ العنوان والوصف ═══════════════════ -->
-  <title>SchoolPulse</title>
-  <meta name="description" content="SchoolPulse تطبيق مدرسي ذكي يعمل بدون إنترنت. نظّم جدولك، اضبط منبهاتك، واستقبل تنبيهاتك اليومية. مجاني بالكامل، بدون إعلانات، وبدون حساب.">
-  <meta name="keywords" content="SchoolPulse, تطبيق مدرسي, جدول المدرسة, منبه المدرسة, تنبيهات مدرسية, تطبيق للطلاب, school app, student timetable, school alarm">
+  <title>SchoolPulse V2.0.0 — مساعدك المدرسي الذكي</title>
+  <meta name="description" content="SchoolPulse V2.0.0 تطبيق مدرسي ذكي يعمل بدون إنترنت. جدول مدرسي، منبهات حقيقية، مساعد ذكي بالذكاء الاصطناعي، امتحانات، وجدول دروس. مجاني بالكامل.">
+  <meta name="keywords" content="SchoolPulse, تطبيق مدرسي, جدول المدرسة, منبه المدرسة, مساعد ذكي, ذكاء اصطناعي, امتحانات, جدول دروس, school app">
   <meta name="author" content="Mohamed Hany">
   <meta name="robots" content="index, follow">
-  <meta name="language" content="Arabic">
-  <meta name="revisit-after" content="7 days">
 
-  <!-- ═══════════════════ الأيقونات ═══════════════════ -->
   <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
   <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png">
   <link rel="shortcut icon" href="icons/icon.png" type="image/png">
 
-  <!-- ═══════════════════ اللون في شريط المتصفح ═══════════════════ -->
   <meta name="theme-color" content="#0F172A" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)">
 
-  <!-- ═══════════════════ Canonical & Language ═══════════════════ -->
   <link rel="canonical" href="https://motechorbit.github.io/SchoolPulse/">
-  <link rel="alternate" hreflang="ar" href="https://motechorbit.github.io/SchoolPulse/">
-  <link rel="alternate" hreflang="x-default" href="https://motechorbit.github.io/SchoolPulse/">
-
-  <!-- ═══════════════════ PWA (تثبيت كتطبيق ويب) ═══════════════════ -->
   <link rel="manifest" href="manifest.json">
-  <meta name="application-name" content="SchoolPulse">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="SchoolPulse">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="msapplication-TileColor" content="#2563EB">
-  <meta name="msapplication-TileImage" content="icons/icon-144.png">
-  <meta name="msapplication-tap-highlight" content="no">
 
-  <!-- ═══════════════════ Open Graph (فيسبوك، واتساب، لينكدإن) ═══════════════════ -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="SchoolPulse">
-  <meta property="og:title" content="🎓 SchoolPulse — مساعدك المدرسي الذكي">
-  <meta property="og:description" content="نظّم جدولك، اضبط منبهاتك، واستقبل تنبيهاتك اليومية. تطبيق مجاني يعمل بدون إنترنت.">
-  <meta property="og:url" content="https://motechorbit.github.io/SchoolPulse/">
+  <meta property="og:title" content="🎓 SchoolPulse V2.0.0 — مساعدك المدرسي الذكي">
+  <meta property="og:description" content="الإصدار الجديد: ذكاء اصطناعي، جدول دروس، امتحانات، وأصوات مخصصة.">
   <meta property="og:image" content="https://motechorbit.github.io/SchoolPulse/icons/preview.png">
-  <meta property="og:image:secure_url" content="https://motechorbit.github.io/SchoolPulse/icons/preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="SchoolPulse — تطبيق مدرسي ذكي">
-  <meta property="og:locale" content="ar_EG">
-  <meta property="og:locale:alternate" content="en_US">
 
-  <!-- ═══════════════════ Twitter Card ═══════════════════ -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@MohamedHany">
-  <meta name="twitter:creator" content="@MohamedHany">
-  <meta name="twitter:title" content="🎓 SchoolPulse — مساعدك المدرسي الذكي">
-  <meta name="twitter:description" content="نظّم جدولك، اضبط منبهاتك، واستقبل تنبيهاتك اليومية. تطبيق مجاني يعمل بدون إنترنت.">
-  <meta name="twitter:image" content="https://motechorbit.github.io/SchoolPulse/icons/preview.png">
-  <meta name="twitter:image:alt" content="SchoolPulse — تطبيق مدرسي ذكي">
-
-  <!-- ═══════════════════ Telegram ═══════════════════ -->
-  <meta property="telegram:channel" content="@SchoolPulse">
-  <meta name="telegram:card" content="summary_large_image">
-
-  <!-- ═══════════════════ Schema.org - MobileApplication ═══════════════════ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MobileApplication",
-    "name": "SchoolPulse",
-    "description": "تطبيق مدرسي ذكي يعمل بدون إنترنت لتنظيم الجدول الدراسي والمنبهات.",
-    "operatingSystem": "Android 7.0+",
-    "applicationCategory": "EducationalApplication",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "ratingCount": "1"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Mohamed Hany",
-      "telephone": "+201553308975"
-    },
-    "screenshot": "https://motechorbit.github.io/SchoolPulse/screenshots/home.png",
-    "softwareVersion": "1.0.0",
-    "fileSize": "57MB",
-    "inLanguage": "ar"
-  }
-  </script>
-
-  <!-- ═══════════════════ Schema.org - Organization ═══════════════════ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "SchoolPulse",
-    "url": "https://motechorbit.github.io/SchoolPulse/",
-    "logo": "https://motechorbit.github.io/SchoolPulse/icons/icon-512.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+201553308947",
-      "contactType": "customer support",
-      "areaServed": "EG",
-      "availableLanguage": ["Arabic", "English"]
-    }
-  }
-  </script>
-
-  <!-- ═══════════════════ Preconnect (تسريع التحميل) ═══════════════════ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-
-  <!-- ═══════════════════ Preload الأصول المهمة ═══════════════════ -->
-  <link rel="preload" as="image" href="icons/icon.png" type="image/png">
-
-  <!-- ═══════════════════ DNS Prefetch للروابط الخارجية ═══════════════════ -->
-  <link rel="dns-prefetch" href="https://drive.google.com">
-  <link rel="dns-prefetch" href="https://play.google.com">
-  <link rel="dns-prefetch" href="https://github.com">
-
-  <!-- ═══════════════════ أمان إضافي ═══════════════════ -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-
-  <!-- ═══════════════════ منع الترجمة التلقائية ═══════════════════ -->
-  <meta name="google" content="notranslate">
-
-  <!-- ═══════════════════ Font Awesome 6 (الأيقونات) ═══════════════════ -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 <style>
-  /* ═══════════════════ المتغيرات ═══════════════════ */
   :root {
     --blue: #2563EB;
     --purple: #7C3AED;
+    --blue-light: #60A5FA;
+    --purple-light: #A78BFA;
+    --green: #10B981;
     --dark-bg: #0F172A;
     --dark-card: #1E293B;
     --dark-card-hover: #263449;
@@ -158,6 +50,7 @@
     --text-muted: #64748B;
     --text-muted-dark: #94A3B8;
     --radius: 20px;
+    --radius-sm: 12px;
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -183,7 +76,6 @@
     --glow: 0 20px 60px -15px rgba(37, 99, 235, 0.35);
   }
 
-  /* ═══════════════════ الأساسيات ═══════════════════ */
   * {
     margin: 0;
     padding: 0;
@@ -199,6 +91,10 @@
     line-height: 1.7;
     transition: background var(--transition), color var(--transition);
     overflow-x: hidden;
+  }
+
+  body.intro-active {
+    overflow: hidden;
   }
 
   .container {
@@ -291,7 +187,7 @@
     transform: scale(1.05);
   }
 
-  /* ═══════════════════ Hero ═══════════════════ */
+  /* ═══════════════════ Hero بسيط بعد المقدمة ═══════════════════ */
   .hero {
     padding: 80px 0 100px;
     text-align: center;
@@ -307,9 +203,7 @@
     transform: translateX(-50%);
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle,
-      rgba(37, 99, 235, 0.18) 0%,
-      transparent 70%);
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.18) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -379,6 +273,7 @@
     cursor: pointer;
     border: none;
     transition: all var(--transition);
+    font-family: inherit;
   }
 
   .btn i { font-size: 18px; }
@@ -405,7 +300,103 @@
     color: var(--blue);
   }
 
-  /* ═══════════════════ الأقسام ═══════════════════ */
+  /* ═══════════════════ What's New ═══════════════════ */
+  .whats-new {
+    padding: 60px 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(124, 58, 237, 0.05));
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .whats-new-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .whats-new-header h2 {
+    font-size: clamp(24px, 3.5vw, 32px);
+    font-weight: 800;
+    margin-bottom: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .whats-new-header h2 i { color: var(--purple); }
+
+  .whats-new-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .new-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: all var(--transition);
+  }
+
+  .new-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(37, 99, 235, 0.4);
+    box-shadow: var(--shadow);
+  }
+
+  .new-item-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .new-item-content h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .new-item-content p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .new-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    background: linear-gradient(135deg, #10B981, #059669);
+    color: white;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px -2px rgba(16, 185, 129, 0.5);
+    animation: new-badge-pulse 2s infinite;
+  }
+
+  .new-badge i { font-size: 8px; }
+
+  @keyframes new-badge-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
   section { padding: 80px 0; }
 
   .section-title {
@@ -426,7 +417,6 @@
     margin: 0 auto;
   }
 
-  /* ═══════════════════ المميزات ═══════════════════ */
   .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -446,10 +436,8 @@
   .feature-card::before {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 3px;
+    top: 0; right: 0;
+    width: 100%; height: 3px;
     background: linear-gradient(90deg, var(--blue), var(--purple));
     transform: scaleX(0);
     transform-origin: right;
@@ -472,9 +460,7 @@
     width: 56px;
     height: 56px;
     border-radius: 14px;
-    background: linear-gradient(135deg,
-      rgba(37, 99, 235, 0.15),
-      rgba(124, 58, 237, 0.15));
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(124, 58, 237, 0.15));
     display: grid;
     place-items: center;
     font-size: 24px;
@@ -482,14 +468,16 @@
     color: var(--blue);
   }
 
-  [data-theme="dark"] .feature-icon {
-    color: #60A5FA;
-  }
+  [data-theme="dark"] .feature-icon { color: #60A5FA; }
 
   .feature-card h3 {
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
   }
 
   .feature-card p {
@@ -498,7 +486,6 @@
     line-height: 1.7;
   }
 
-  /* ═══════════════════ قسم التحميل ═══════════════════ */
   .download-section {
     background: var(--card);
     border-radius: 24px;
@@ -512,33 +499,22 @@
   .download-section::before {
     content: '';
     position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle,
-      rgba(124, 58, 237, 0.15) 0%,
-      transparent 70%);
+    top: -50%; right: -20%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
     pointer-events: none;
   }
 
   .download-section::after {
     content: '';
     position: absolute;
-    bottom: -50%;
-    left: -20%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle,
-      rgba(37, 99, 235, 0.15) 0%,
-      transparent 70%);
+    bottom: -50%; left: -20%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
     pointer-events: none;
   }
 
-  .download-content {
-    position: relative;
-    z-index: 1;
-  }
+  .download-content { position: relative; z-index: 1; }
 
   .download-icon {
     width: 80px;
@@ -630,11 +606,9 @@
 
   .download-info i { color: var(--blue); font-size: 14px; }
 
-  /* ═══════════════════ Toast Notification ═══════════════════ */
   .toast-container {
     position: fixed;
-    top: 24px;
-    left: 50%;
+    top: 24px; left: 50%;
     transform: translateX(-50%) translateY(-120%);
     z-index: 9999;
     display: flex;
@@ -648,8 +622,7 @@
     max-width: calc(100vw - 48px);
     width: max-content;
     opacity: 0;
-    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
-                opacity 0.4s ease;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
     pointer-events: none;
     overflow: hidden;
   }
@@ -657,10 +630,8 @@
   .toast-container::before {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 3px;
+    top: 0; right: 0;
+    width: 100%; height: 3px;
     background: linear-gradient(90deg, var(--blue), var(--purple));
   }
 
@@ -671,12 +642,9 @@
   }
 
   .toast-icon {
-    width: 44px;
-    height: 44px;
+    width: 44px; height: 44px;
     border-radius: 12px;
-    background: linear-gradient(135deg,
-      rgba(37, 99, 235, 0.15),
-      rgba(124, 58, 237, 0.15));
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(124, 58, 237, 0.15));
     display: grid;
     place-items: center;
     font-size: 20px;
@@ -686,28 +654,12 @@
 
   [data-theme="dark"] .toast-icon { color: #60A5FA; }
 
-  .toast-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .toast-title {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text);
-    line-height: 1.3;
-  }
-
-  .toast-message {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.5;
-  }
+  .toast-content { display: flex; flex-direction: column; gap: 2px; }
+  .toast-title { font-size: 15px; font-weight: 700; color: var(--text); }
+  .toast-message { font-size: 13px; color: var(--muted); }
 
   .toast-close {
-    width: 28px;
-    height: 28px;
+    width: 28px; height: 28px;
     border-radius: 8px;
     border: none;
     background: transparent;
@@ -721,29 +673,8 @@
     margin-right: 4px;
   }
 
-  .toast-close:hover {
-    background: var(--border);
-    color: var(--text);
-  }
+  .toast-close:hover { background: var(--border); color: var(--text); }
 
-  @media (max-width: 600px) {
-    .toast-container {
-      top: 16px;
-      padding: 14px 18px;
-      gap: 10px;
-    }
-
-    .toast-icon {
-      width: 38px;
-      height: 38px;
-      font-size: 16px;
-    }
-
-    .toast-title { font-size: 14px; }
-    .toast-message { font-size: 12px; }
-  }
-
-  /* ═══════════════════ عن التطبيق / المطور ═══════════════════ */
   .developer {
     background: var(--card);
     border-radius: var(--radius);
@@ -753,16 +684,14 @@
   }
 
   .dev-avatar {
-    width: 120px;
-    height: 120px;
+    width: 120px; height: 120px;
     margin: 0 auto 20px;
     display: grid;
     place-items: center;
   }
 
   .dev-avatar-img {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     object-fit: contain;
     display: block;
     filter: drop-shadow(0 15px 30px rgba(37, 99, 235, 0.25));
@@ -820,7 +749,6 @@
     font-size: 14px;
   }
 
-  /* ═══════════════════ Footer ═══════════════════ */
   footer {
     padding: 40px 0;
     text-align: center;
@@ -843,14 +771,12 @@
   }
 
   .footer-logo-img {
-    width: 32px;
-    height: 32px;
+    width: 32px; height: 32px;
     object-fit: contain;
     display: block;
     -webkit-text-fill-color: initial;
   }
 
-  /* ═══════════════════ Responsive ═══════════════════ */
   @media (max-width: 768px) {
     .nav-links { display: none; }
     .hero { padding: 50px 0 70px; }
@@ -859,359 +785,1408 @@
     .feature-card { padding: 24px 20px; }
     .download-section { padding: 40px 24px; }
     .hero-logo { width: 140px; height: 140px; }
+    .whats-new-grid { grid-template-columns: 1fr; }
   }
 
-  /* ═══════════════════ Animations ═══════════════════ */
   @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
-  .animate {
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out forwards;
+  /* ═══════════════════════════════════════════════════════════
+              INTRO SCREEN (Splash)
+  ═══════════════════════════════════════════════════════════ */
+
+  .intro-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    overflow: hidden;
+    isolation: isolate;
+
+    --sp-w: clamp(180px, 56vw, 300px);
+    --sp-h: calc(var(--sp-w) * 1.3);
+    --sp-radius: 20px;
+    --sp-perspective: 1000px;
+    --sp-face-bg: linear-gradient(145deg, #7a6bff 0%, #3a3fb8 50%, #121a52 100%);
+    --sp-edge: #1a2070;
+    --sp-glow: rgba(122, 107, 255, .55);
+    --sp-bg: radial-gradient(ellipse at 50% 40%, #141a4d 0%, #070b24 60%, #04061a 100%);
+    --sp-title-size: clamp(30px, 10.5vw, 104px);
+
+    background: var(--sp-bg);
+    color: #fff;
+
+    --rx: 0deg;
+    --ry: 0deg;
+    --sx: 0;
+
+    transition: opacity 1s ease-out, visibility 1s;
   }
 
-  .animate.delay-1 { animation-delay: 0.2s; }
-  .animate.delay-2 { animation-delay: 0.4s; }
-  .animate.delay-3 { animation-delay: 0.6s; }
+  .intro-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .intro-screen * { box-sizing: border-box; }
+
+  .sp3d__viewport {
+    position: absolute;
+    inset: 0;
+    perspective: var(--sp-perspective);
+    perspective-origin: 50% 45%;
+    overflow: hidden;
+  }
+
+  .sp3d__camera {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+
+  .sp3d__scene {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    width: 0;
+    height: 0;
+    transform-style: preserve-3d;
+  }
+
+  .sp3d__fly {
+    position: absolute;
+    left: calc(var(--sp-w) / -2);
+    top: calc(var(--sp-h) / -2);
+    width: var(--sp-w);
+    height: var(--sp-h);
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+
+  .sp3d__tilt {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+    transform: rotateX(var(--rx)) rotateY(var(--ry));
+  }
+
+  .sp3d__layer {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--sp-radius);
+    background: var(--sp-edge);
+  }
+
+  .sp3d__layer:nth-child(odd) { filter: brightness(1.35); }
+
+  .sp3d__face {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--sp-radius);
+    overflow: hidden;
+    background: var(--sp-face-bg);
+    backface-visibility: hidden;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2);
+  }
+
+  .sp3d__face--back { background: linear-gradient(145deg, #2a2f8f, #0b1034); }
+
+  .sp3d__sheen {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, .3) 50%, transparent 65%);
+    background-size: 260% 100%;
+    background-position: calc(50% + var(--sx) * 5%) 50%;
+  }
+
+  .sp3d__chip {
+    position: absolute;
+    top: 14px; left: 14px;
+    font-size: 11px;
+    letter-spacing: .14em;
+    font-weight: 700;
+    padding: 4px 9px;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, .16);
+    direction: ltr;
+  }
+
+  .sp3d__ecg {
+    position: absolute;
+    left: 8%; right: 8%;
+    top: 30%;
+    width: 84%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .sp3d__ecg polyline {
+    stroke: #fff;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 60 340;
+    animation: sp3d-ecg 2.4s linear infinite;
+    filter: drop-shadow(0 0 6px #fff);
+  }
+
+  @keyframes sp3d-ecg {
+    from { stroke-dashoffset: 400; }
+    to { stroke-dashoffset: 0; }
+  }
+
+  .sp3d__bars {
+    position: absolute;
+    left: 14px; right: 14px;
+    bottom: 16px;
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+    height: 28%;
+  }
+
+  .sp3d__bars b {
+    flex: 1;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, .22);
+  }
+
+  .sp3d__bars b:nth-child(1) { height: 45%; }
+  .sp3d__bars b:nth-child(2) { height: 80%; }
+  .sp3d__bars b:nth-child(3) { height: 60%; }
+  .sp3d__bars b:nth-child(4) { height: 100%; }
+
+  .sp3d__shards {
+    position: absolute;
+    left: 0; top: 0;
+    width: 0; height: 0;
+    transform-style: preserve-3d;
+  }
+
+  .sp3d__shard {
+    position: absolute;
+    left: 0; top: 0;
+    background: var(--sp-face-bg);
+    will-change: transform, opacity;
+  }
+
+  .sp3d__title {
+    position: absolute;
+    left: 0; top: 0;
+    margin: 0;
+    display: flex;
+    white-space: nowrap;
+    direction: ltr;
+    transform-style: preserve-3d;
+    font-size: var(--sp-title-size);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: .02em;
+    transform: translate(-50%, -50%) rotateX(calc(var(--rx) * .4)) rotateY(calc(var(--ry) * .4));
+    text-shadow: 0 0 24px var(--sp-glow), 0 6px 30px rgba(0, 0, 0, .45);
+  }
+
+  .sp3d__ch {
+    display: inline-block;
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  .intro-screen.is-done .sp3d__ch { opacity: 1; }
+
+  .sp3d__flash {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 3;
+    background: radial-gradient(circle at 50% 45%, #fff 0%, rgba(170, 160, 255, .65) 38%, transparent 70%);
+  }
+
+  .sp3d__tag {
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 12%;
+    margin: 0;
+    text-align: center;
+    font-size: clamp(14px, 3.6vw, 20px);
+    color: #c9ccff;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .8s .2s, transform .8s .2s;
+    z-index: 4;
+  }
+
+  .intro-screen.is-done .sp3d__tag {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ═══════════════════ مقدمة SchoolPulse المطوّرة ═══════════════════ */
+  .intro-screen {
+    --sp-w: clamp(176px, 34vw, 278px);
+    --sp-h: var(--sp-w);
+    --sp-radius: clamp(28px, 5vw, 38px);
+    --sp-perspective: 1250px;
+    --sp-face-bg: linear-gradient(145deg, #152a68 0%, #17206a 48%, #311872 100%);
+    --sp-edge: #11194c;
+    --sp-glow: rgba(104, 123, 255, .75);
+    --sp-title-size: clamp(34px, 9.5vw, 104px);
+    background: #060817;
+    background-image:
+      radial-gradient(ellipse at 50% 43%, rgba(35, 67, 179, .28), transparent 34%),
+      radial-gradient(ellipse at 50% 100%, rgba(87, 34, 185, .22), transparent 48%),
+      linear-gradient(145deg, #080c1e 0%, #060817 55%, #0a0820 100%);
+  }
+
+  .intro-screen::before,
+  .intro-screen::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .intro-screen::before {
+    z-index: 0;
+    opacity: .7;
+    background:
+      radial-gradient(circle at 16% 24%, rgba(76, 117, 255, .16), transparent 23%),
+      radial-gradient(circle at 86% 68%, rgba(164, 72, 255, .13), transparent 25%);
+    animation: intro-ambient 8s ease-in-out infinite alternate;
+  }
+
+  .intro-screen::after {
+    z-index: 0;
+    opacity: .22;
+    background-image: linear-gradient(rgba(154, 177, 255, .08) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(154, 177, 255, .08) 1px, transparent 1px);
+    background-size: 54px 54px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 45%, #000 0%, transparent 78%);
+    mask-image: radial-gradient(ellipse at 50% 45%, #000 0%, transparent 78%);
+  }
+
+  @keyframes intro-ambient {
+    from { transform: scale(1); opacity: .42; }
+    to { transform: scale(1.12); opacity: .82; }
+  }
+
+  .intro-heading {
+    position: absolute;
+    z-index: 5;
+    top: clamp(25px, 6vh, 58px);
+    left: 20px;
+    right: 20px;
+    display: grid;
+    justify-items: center;
+    gap: 8px;
+    text-align: center;
+    pointer-events: none;
+    animation: intro-heading-in .9s .15s both;
+  }
+
+  .intro-heading__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 7px 13px;
+    border: 1px solid rgba(174, 190, 255, .18);
+    border-radius: 999px;
+    color: #c9d5ff;
+    background: rgba(18, 27, 64, .55);
+    box-shadow: inset 0 1px rgba(255, 255, 255, .08), 0 8px 28px rgba(0, 0, 0, .16);
+    backdrop-filter: blur(12px);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .06em;
+  }
+
+  .intro-heading__eyebrow::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #53e2ba;
+    box-shadow: 0 0 12px rgba(83, 226, 186, .9);
+  }
+
+  .intro-heading h1 {
+    color: rgba(240, 244, 255, .88);
+    font-size: clamp(17px, 2.5vw, 24px);
+    font-weight: 600;
+    letter-spacing: -.025em;
+    text-shadow: 0 3px 24px rgba(96, 119, 255, .26);
+  }
+
+  .intro-heading h1 span {
+    color: #a9b8ff;
+    font-weight: 800;
+  }
+
+  @keyframes intro-heading-in {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .sp3d__viewport { z-index: 1; }
+
+  .intro-orbit {
+    position: absolute;
+    z-index: 1;
+    top: 45%;
+    left: 50%;
+    width: min(72vw, 690px);
+    aspect-ratio: 1;
+    border: 1px solid rgba(129, 157, 255, .14);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotateX(68deg);
+    transform-style: preserve-3d;
+    pointer-events: none;
+  }
+
+  .intro-orbit::before,
+  .intro-orbit::after {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  .intro-orbit::before {
+    inset: 12%;
+    border: 1px dashed rgba(168, 131, 255, .2);
+  }
+
+  .intro-orbit::after {
+    width: 9px;
+    height: 9px;
+    top: 8%;
+    left: 22%;
+    background: #91aaff;
+    box-shadow: 0 0 18px 4px rgba(100, 130, 255, .55);
+    animation: orbit-glint 4s ease-in-out infinite;
+  }
+
+  .intro-orbit--outer {
+    animation: orbit-spin 32s linear infinite;
+  }
+
+  .intro-orbit--inner {
+    width: min(57vw, 540px);
+    border-color: rgba(171, 121, 255, .12);
+    transform: translate(-50%, -50%) rotateX(68deg) rotateY(28deg);
+    animation: orbit-spin-reverse 26s linear infinite;
+  }
+
+  @keyframes orbit-spin {
+    to { transform: translate(-50%, -50%) rotateX(68deg) rotateZ(360deg); }
+  }
+
+  @keyframes orbit-spin-reverse {
+    to { transform: translate(-50%, -50%) rotateX(68deg) rotateY(28deg) rotateZ(-360deg); }
+  }
+
+  @keyframes orbit-glint {
+    0%, 100% { opacity: .45; transform: scale(.75); }
+    50% { opacity: 1; transform: scale(1.25); }
+  }
+
+  .sp3d__scene {
+    top: 45%;
+    z-index: 2;
+  }
+
+  .sp3d__fly {
+    filter: drop-shadow(0 35px 42px rgba(3, 5, 20, .52));
+  }
+
+  .sp3d__layer {
+    background: linear-gradient(145deg, #273d9c, #121947 60%, #4b2185);
+    box-shadow: inset 0 1px rgba(255, 255, 255, .12);
+  }
+
+  .sp3d__face {
+    border: 1px solid rgba(205, 218, 255, .3);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .28),
+                inset 0 -24px 44px rgba(4, 8, 34, .2),
+                0 0 50px rgba(75, 97, 255, .28);
+  }
+
+  .sp3d__face--front {
+    background:
+      radial-gradient(circle at 50% 44%, rgba(88, 129, 255, .35), transparent 48%),
+      linear-gradient(145deg, #152d79 0%, #18216c 50%, #351874 100%);
+  }
+
+  .sp3d__face--front::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 1px solid rgba(220, 230, 255, .13);
+    border-radius: calc(var(--sp-radius) - 8px);
+    pointer-events: none;
+  }
+
+  .sp3d__face--back { background: linear-gradient(145deg, #283893, #0a0e2b 72%, #321a70); }
+
+  .sp3d__sheen {
+    z-index: 2;
+    opacity: .62;
+    background: linear-gradient(115deg, transparent 31%, rgba(255, 255, 255, .34) 48%, transparent 63%);
+    background-size: 240% 100%;
+    animation: card-sheen 5s ease-in-out infinite;
+  }
+
+  @keyframes card-sheen {
+    0%, 38% { background-position: 120% 50%; }
+    70%, 100% { background-position: -110% 50%; }
+  }
+
+  .sp3d__chip {
+    z-index: 3;
+    top: 15px;
+    left: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 10px;
+    border: 1px solid rgba(226, 233, 255, .19);
+    background: rgba(5, 10, 36, .34);
+    box-shadow: inset 0 1px rgba(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
+    color: #f3f5ff;
+    font-size: 9px;
+    letter-spacing: .12em;
+  }
+
+  .sp3d__chip i {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #5ce3b7;
+    box-shadow: 0 0 10px rgba(92, 227, 183, .9);
+  }
+
+  .sp3d__logo-art {
+    position: absolute;
+    z-index: 1;
+    inset: 12% 10% 17%;
+    width: 80%;
+    height: 71%;
+    object-fit: contain;
+    filter: drop-shadow(0 14px 20px rgba(3, 7, 31, .36));
+    animation: logo-hover 4.2s ease-in-out infinite;
+  }
+
+  @keyframes logo-hover {
+    0%, 100% { transform: translateY(0) rotate(-1deg); }
+    50% { transform: translateY(-5px) rotate(1deg); }
+  }
+
+  .sp3d__card-caption {
+    position: absolute;
+    z-index: 3;
+    right: 15px;
+    bottom: 14px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    color: rgba(237, 241, 255, .85);
+    font-size: 9px;
+    font-weight: 700;
+  }
+
+  .sp3d__card-caption span:last-child {
+    color: #c4b5fd;
+    direction: ltr;
+    letter-spacing: .08em;
+  }
+
+  .sp3d__shard {
+    background-image: url('icons/icon-512.png'), linear-gradient(145deg, #152d79, #351874);
+    background-repeat: no-repeat;
+  }
+
+  .sp3d__title {
+    top: 0;
+    font-weight: 900;
+    letter-spacing: -.015em;
+    text-shadow: 0 0 18px rgba(98, 134, 255, .85),
+                 0 0 50px rgba(121, 78, 255, .55),
+                 0 10px 34px rgba(0, 0, 0, .55);
+  }
+
+  .sp3d__ch { color: #f7f8ff; }
+
+  .sp3d__flash {
+    z-index: 3;
+    background: radial-gradient(circle at 50% 45%, #fff 0%, rgba(133, 167, 255, .58) 24%, rgba(153, 106, 255, .16) 47%, transparent 72%);
+  }
+
+  .intro-float {
+    position: absolute;
+    z-index: 4;
+    top: 44%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 184px;
+    padding: 13px 14px;
+    border: 1px solid rgba(181, 196, 255, .16);
+    border-radius: 16px;
+    color: #f4f6ff;
+    background: linear-gradient(145deg, rgba(25, 35, 77, .72), rgba(17, 19, 49, .63));
+    box-shadow: inset 0 1px rgba(255, 255, 255, .1), 0 16px 45px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(16px);
+    animation: float-panel 5s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .intro-float--schedule { left: calc(50% - min(39vw, 470px)); }
+  .intro-float--focus {
+    top: 53%;
+    left: calc(50% + min(22vw, 300px));
+    animation-delay: -2.4s;
+  }
+
+  .intro-float__icon {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(190, 203, 255, .2);
+    border-radius: 12px;
+    color: #b7c5ff;
+    background: linear-gradient(145deg, rgba(83, 117, 255, .27), rgba(139, 75, 255, .23));
+    font-size: 15px;
+  }
+
+  .intro-float__copy { display: grid; gap: 1px; }
+  .intro-float__copy strong { font-size: 11px; font-weight: 800; }
+  .intro-float__copy small { color: #aab5df; font-size: 9px; }
+
+  @keyframes float-panel {
+    0%, 100% { transform: translateY(0) rotateY(-5deg); }
+    50% { transform: translateY(-9px) rotateY(2deg); }
+  }
+
+  .sp3d__tag {
+    z-index: 5;
+    bottom: clamp(55px, 11vh, 92px);
+    display: grid;
+    justify-items: center;
+    gap: 7px;
+    color: #dbe2ff;
+    opacity: .92;
+    transform: none;
+    text-shadow: 0 2px 18px rgba(83, 110, 255, .35);
+  }
+
+  .sp3d__tag i { color: #a993ff; }
+
+  .intro-version {
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    bottom: 22px;
+    left: 0;
+    color: rgba(178, 189, 224, .62);
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: .04em;
+    pointer-events: none;
+  }
+
+  @media (max-width: 700px) {
+    .intro-screen {
+      --sp-w: clamp(168px, 58vw, 232px);
+      --sp-title-size: clamp(31px, 10vw, 66px);
+    }
+
+    .intro-orbit { width: 92vw; }
+    .intro-orbit--inner { width: 72vw; }
+    .intro-float { display: none; }
+    .intro-heading { top: max(24px, env(safe-area-inset-top)); }
+    .intro-heading h1 { font-size: clamp(16px, 4.4vw, 21px); }
+    .sp3d__scene { top: 46%; }
+    .sp3d__tag { bottom: max(58px, calc(env(safe-area-inset-bottom) + 54px)); }
+    .intro-version { bottom: max(18px, env(safe-area-inset-bottom)); }
+  }
+
+  @media (max-height: 620px) and (min-width: 701px) {
+    .intro-heading { top: 14px; gap: 4px; }
+    .intro-heading__eyebrow { padding: 5px 10px; }
+    .intro-heading h1 { font-size: 17px; }
+    .sp3d__scene, .intro-orbit { top: 48%; }
+    .intro-float { top: 48%; }
+    .intro-float--focus { top: 57%; }
+    .sp3d__tag { bottom: 42px; }
+    .intro-version { bottom: 10px; }
+  }
+
+  @media (max-height: 520px) and (max-width: 700px) {
+    .intro-screen { --sp-w: clamp(136px, 36vh, 188px); }
+    .intro-heading { top: 8px; gap: 3px; }
+    .intro-heading__eyebrow { padding: 4px 9px; font-size: 9px; }
+    .intro-heading h1 { font-size: 15px; }
+    .sp3d__scene, .intro-orbit { top: 51%; }
+    .sp3d__tag { bottom: 36px; }
+    .sp3d__tag small { display: none; }
+    .intro-version { bottom: 8px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .intro-screen::before,
+    .intro-heading,
+    .intro-orbit,
+    .intro-float,
+    .sp3d__logo-art,
+    .sp3d__sheen { animation: none !important; }
+  }
 </style>
 </head>
-<body data-theme="dark">
+<body data-theme="dark" class="intro-active">
 
-<!-- ═══════════════════ الشريط العلوي ═══════════════════ -->
-<header>
-  <div class="container">
-    <nav>
-      <div class="logo">
-        <div class="logo-icon">
-          <img src="icons/icon.png" alt="SchoolPulse" class="logo-icon-img">
+<!-- ═══════════════════════════════════════════════════════════
+              INTRO SCREEN (Splash 3D)
+═══════════════════════════════════════════════════════════ -->
+<div class="intro-screen" id="introScreen">
+  <div class="intro-heading" dir="rtl">
+    <span class="intro-heading__eyebrow">مساحتك الدراسية المتكاملة</span>
+    <h1>نظامك الدراسي، <span>بكل بساطة</span></h1>
+  </div>
+
+  <div class="sp3d__viewport">
+    <div class="intro-orbit intro-orbit--outer" aria-hidden="true"></div>
+    <div class="intro-orbit intro-orbit--inner" aria-hidden="true"></div>
+    <div class="sp3d__camera" id="introCamera">
+      <div class="sp3d__scene">
+        <div class="sp3d__fly" id="introFly">
+          <div class="sp3d__tilt" id="introTilt">
+            <div class="sp3d__face sp3d__face--back"></div>
+            <div class="sp3d__face sp3d__face--front">
+              <i class="sp3d__sheen"></i>
+              <span class="sp3d__chip" dir="ltr"><i></i> VERSION 2.0</span>
+              <img class="sp3d__logo-art" src="icons/icon-512.png" alt="">
+              <div class="sp3d__card-caption" dir="rtl">
+                <span>رفيق يومك الدراسي</span>
+                <span>SP / 02</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <span>SchoolPulse</span>
+        <h2 class="sp3d__title" id="introTitle" aria-label="SchoolPulse"></h2>
       </div>
-
-      <ul class="nav-links">
-        <li><a href="#features">المميزات</a></li>
-        <li><a href="#download">التحميل</a></li>
-        <li><a href="#about">عن التطبيق</a></li>
-        <li><a href="#developer">المطور</a></li>
-      </ul>
-
-      <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
-        <i class="fa-solid fa-sun"></i>
-      </button>
-    </nav>
+    </div>
+    <div class="sp3d__flash" id="introFlash"></div>
   </div>
-</header>
 
-<!-- ═══════════════════ Hero ═══════════════════ -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-logo animate">
-      <img src="icons/icon.png" alt="SchoolPulse" class="hero-logo-img">
-    </div>
-
-    <h1 class="animate delay-1">SchoolPulse</h1>
-    <p class="animate delay-2">
-      مساعدك المدرسي الذكي — نظّم جدولك، اضبط منبهاتك، واستقبل تنبيهاتك اليومية
-      بدون إنترنت وبأمان كامل.
-    </p>
-
-    <div class="hero-buttons animate delay-3">
-      <a href="#download" class="btn btn-primary">
-        <i class="fa-solid fa-download"></i>
-        حمّل التطبيق
-      </a>
-      <a href="#features" class="btn btn-outline">
-        <i class="fa-solid fa-rocket"></i>
-        تعرّف على المميزات
-      </a>
-    </div>
+  <div class="intro-float intro-float--schedule" dir="rtl" aria-hidden="true">
+    <span class="intro-float__icon"><i class="fa-regular fa-calendar-check"></i></span>
+    <span class="intro-float__copy"><strong>جدولك الدراسي</strong><small>كل حصصك في مكان واحد</small></span>
   </div>
-</section>
-
-<!-- ═══════════════════ المميزات ═══════════════════ -->
-<section id="features">
-  <div class="container">
-    <div class="section-title">
-      <h2>مميزات التطبيق</h2>
-      <p>كل ما يحتاجه الطالب في تطبيق واحد — بدون تعقيدات</p>
-    </div>
-
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-solid fa-calendar-days"></i></div>
-        <h3>جدول مرن</h3>
-        <p>أضف حصصك الدراسية بعدد مرن (من 1 إلى 10 حصص)، وحدد أيام الدراسة والمدرس والفصل والملاحظات.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
-        <h3>منبهات حقيقية</h3>
-        <p>منبهات تعمل حتى عند إغلاق التطبيق أو قفل الهاتف. اختر الأيام، الصوت، والاهتزاز.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-solid fa-bell"></i></div>
-        <h3>ربط المنبه بالجدول</h3>
-        <p>عند عمل المنبه، يظهر جدول اليوم كاملًا في الإشعار — تعرف حصصك قبل أن تبدأ يومك.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-solid fa-music"></i></div>
-        <h3>أصوات مخصصة</h3>
-        <p>اختر من بين عدة نغمات، وعاينها قبل الحفظ. يمكنك إضافة المزيد بسهولة.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-solid fa-globe"></i></div>
-        <h3>يعمل بدون إنترنت</h3>
-        <p>كل الوظائف تعمل محليًا — بدون اتصال، بدون حساب، بدون خادم.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
-        <h3>خصوصية كاملة</h3>
-        <p>بياناتك محفوظة على جهازك فقط. لا نجمع أي معلومات ولا نرسلها لأي مكان.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-solid fa-moon"></i></div>
-        <h3>وضعان فاتح وداكن</h3>
-        <p>اختر الوضع المريح لعينيك، أو دع التطبيق يتبع إعدادات جهازك تلقائيًا.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fa-solid fa-user"></i></div>
-        <h3>ملف الطالب</h3>
-        <p>سجّل اسمك واسم مدرستك وصورتك — تظهر في الصفحة الرئيسية كبطاقة شخصية.</p>
-      </div>
-    </div>
+  <div class="intro-float intro-float--focus" dir="rtl" aria-hidden="true">
+    <span class="intro-float__icon"><i class="fa-solid fa-bullseye"></i></span>
+    <span class="intro-float__copy"><strong>ركز على هدفك</strong><small>مهامك وتنبيهاتك بوضوح</small></span>
   </div>
-</section>
 
-<!-- ═══════════════════ قسم التحميل ═══════════════════ -->
-<section id="download">
-  <div class="container">
-    <div class="download-section">
-      <div class="download-content">
-        <div class="download-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-        <h2>حمّل التطبيق الآن</h2>
-        <p>التطبيق مجاني بالكامل، بدون إعلانات، وبدون حساب — حمّله وابدأ فورًا.</p>
-
-        <div class="download-buttons">
-          <!-- زر التحميل المباشر -->
-          <a href="https://yukiapi.site/file/GOnUwh9L" class="download-btn download-btn-primary" download>
-            <i class="fa-solid fa-download"></i>
-            تحميل APK مباشر
-          </a>
-
-          <!-- زر Google Play -->
-          <a href="#" id="googlePlayBtn" class="download-btn download-btn-secondary">
-            <i class="fa-brands fa-google-play"></i>
-            Google Play
-          </a>
-        </div>
-
-        <div class="download-info">
-          <span><i class="fa-solid fa-box"></i> الحجم: ~54 MB</span>
-          <span><i class="fa-brands fa-android"></i> Android 7.0+</span>
-          <span><i class="fa-solid fa-unlock"></i> مجاني بالكامل</span>
-          <span><i class="fa-solid fa-wifi"></i> يعمل بدون إنترنت</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════ عن التطبيق ═══════════════════ -->
-<section id="about">
-  <div class="container">
-    <div class="section-title">
-      <h2>عن التطبيق</h2>
-      <p>SchoolPulse — مساعد مدرسي يعمل بدون إنترنت</p>
-    </div>
-
-    <div class="developer" style="max-width: 720px; margin: 0 auto;">
-      <div class="dev-avatar">
-        <img src="icons/student.png" alt="SchoolPulse" class="dev-avatar-img">
-      </div>
-      <h3>SchoolPulse</h3>
-      <p style="font-size: 16px; line-height: 1.9; margin-top: 20px;">
-        تطبيق مساعد مدرسي مصمم للطلاب، يساعدهم على تنظيم جدول المدرسة،
-        ضبط منبهاتهم اليومية، واستقبال تنبيهات ذكية تحتوي على جدول اليوم
-        — كل ذلك بدون الحاجة إلى اتصال بالإنترنت.
-      </p>
-
-      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 28px;">
-        <div style="padding: 10px 20px; border-radius: 12px; background: rgba(37, 99, 235, 0.15); color: #60A5FA; font-weight: 600; font-size: 14px;">
-          الإصدار 1.0.0
-        </div>
-        <div style="padding: 10px 20px; border-radius: 12px; background: rgba(124, 58, 237, 0.15); color: #A78BFA; font-weight: 600; font-size: 14px;">
-          Android
-        </div>
-        <div style="padding: 10px 20px; border-radius: 12px; background: rgba(37, 99, 235, 0.15); color: #60A5FA; font-weight: 600; font-size: 14px;">
-          Offline-First
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════ عن المطور ═══════════════════ -->
-<section id="developer">
-  <div class="container">
-    <div class="section-title">
-      <h2>عن المطور</h2>
-      <p>من صنع مطوّر شغوف بتطوير التطبيقات المفيدة</p>
-    </div>
-
-    <div class="developer" style="max-width: 600px; margin: 0 auto;">
-      <div class="dev-avatar">
-        <img src="icons/dev-icon.png" alt="Mohamed Hany" class="dev-avatar-img">
-      </div>
-      <h3>Mohamed Hany</h3>
-      <p>مطوّر تطبيقات ويب , سطح مكتب , هاتف محمول</p>
-
-      <div class="contacts">
-        <a href="tel:01553308975" class="contact-btn">
-          <i class="fa-solid fa-phone"></i>
-          01553308975
-        </a>
-        <a href="tel:01553308947" class="contact-btn">
-          <i class="fa-solid fa-phone"></i>
-          01553308947
-        </a>
-      </div>
-
-      <div class="copyright">
-        © 2026 Mohamed Hany. All rights reserved.
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════ Footer ═══════════════════ -->
-<footer>
-  <div class="container">
-    <div class="footer-logo">
-      <img src="icons/icon.png" alt="SchoolPulse" class="footer-logo-img">
-      <span>SchoolPulse</span>
-    </div>
-    <p>مساعدك المدرسي الذكي — يعمل بدون إنترنت</p>
-    <p style="margin-top: 12px; font-size: 13px;">
-      © 2026 Mohamed Hany. All rights reserved.
-    </p>
-  </div>
-</footer>
-
-<!-- ═══════════════════ Toast Notification ═══════════════════ -->
-<div class="toast-container" id="toast">
-  <div class="toast-icon"><i class="fa-solid fa-rocket"></i></div>
-  <div class="toast-content">
-    <div class="toast-title">قريبًا على Google Play</div>
-    <div class="toast-message">التطبيق لم يُنشر بعد — ترقّب الإطلاق قريبًا!</div>
-  </div>
-  <button class="toast-close" id="toastClose" aria-label="إغلاق">
-    <i class="fa-solid fa-xmark"></i>
-  </button>
+  <p class="sp3d__tag" dir="rtl">
+    <span><i class="fa-solid fa-wand-magic-sparkles"></i> مساعدك المدرسي الذكي</span>
+    <small>جدولك • مهامك • تركيزك، في مكان واحد</small>
+  </p>
+  <div class="intro-version" dir="rtl">الإصدار 2.0.0 <span aria-hidden="true">·</span> يعمل بدون إنترنت</div>
 </div>
 
-<!-- ═══════════════════ JavaScript ═══════════════════ -->
+<!-- ═══════════════════ الموقع الرئيسي ═══════════════════ -->
+<div class="main-site" id="mainSite" style="opacity: 0;">
+
+  <!-- ═══════════════════ الشريط العلوي ═══════════════════ -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <div class="logo-icon">
+            <img src="icons/icon.png" alt="SchoolPulse" class="logo-icon-img">
+          </div>
+          <span>SchoolPulse</span>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#whats-new">الجديد</a></li>
+          <li><a href="#features">المميزات</a></li>
+          <li><a href="#download">التحميل</a></li>
+          <li><a href="#about">عن التطبيق</a></li>
+          <li><a href="#developer">المطور</a></li>
+        </ul>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══════════════════ Hero البسيط (بعد المقدمة) ═══════════════════ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-logo">
+        <img src="icons/icon.png" alt="SchoolPulse" class="hero-logo-img">
+      </div>
+
+      <h1>SchoolPulse</h1>
+      <p>
+        مساعدك المدرسي الذكي — جدولك، منبهاتك، مساعد ذكي بالذكاء الاصطناعي،
+        وامتحاناتك — كل ده في تطبيق واحد بدون إنترنت.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#download" class="btn btn-primary">
+          <i class="fa-solid fa-download"></i>
+          حمّل التطبيق
+        </a>
+        <a href="#whats-new" class="btn btn-outline">
+          <i class="fa-solid fa-star"></i>
+          شوف الجديد
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ What's New ═══════════════════ -->
+  <section id="whats-new" class="whats-new">
+    <div class="container">
+      <div class="whats-new-header">
+        <h2>
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          ما الجديد في الإصدار 2.0.0؟
+        </h2>
+        <p style="color: var(--muted);">إضافات ضخمة وإصلاحات مهمة</p>
+      </div>
+
+      <div class="whats-new-grid">
+        <div class="new-item">
+          <div class="new-item-icon"><i class="fa-solid fa-robot"></i></div>
+          <div class="new-item-content">
+            <h4>المساعد الذكي بالذكاء الاصطناعي <span class="new-badge"><i class="fa-solid fa-star"></i> جديد</span></h4>
+            <p>اسأل عن أي درس أو مسألة، واحصل على شرح مبسّط خطوة بخطوة بالعربية.</p>
+          </div>
+        </div>
+
+        <div class="new-item">
+          <div class="new-item-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+          <div class="new-item-content">
+            <h4>جدول الدروس المنفصل <span class="new-badge"><i class="fa-solid fa-star"></i> جديد</span></h4>
+            <p>أضف دروسًا منفصلة بمواعيد محددة، وفعّل تنبيهًا قبل الدرس بساعة أو ساعتين.</p>
+          </div>
+        </div>
+
+        <div class="new-item">
+          <div class="new-item-icon"><i class="fa-solid fa-file-pen"></i></div>
+          <div class="new-item-content">
+            <h4>قسم الامتحانات <span class="new-badge"><i class="fa-solid fa-star"></i> جديد</span></h4>
+            <p>تابع مواعيد امتحاناتك مع الصور والتفاصيل وايضا امتحانات في المواد وملخصات مناهج.</p>
+          </div>
+        </div>
+
+        <div class="new-item">
+          <div class="new-item-icon"><i class="fa-solid fa-bug-slash"></i></div>
+          <div class="new-item-content">
+            <h4>إصلاح التزامن وإغلاق المنبه <span class="new-badge"><i class="fa-solid fa-star"></i> إصلاح</span></h4>
+            <p>حل مشكلة فقدان البيانات عند الإغلاق المفاجئ، وأصبح إيقاف المنبه أسهل بكثير.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ المميزات ═══════════════════ -->
+  <section id="features">
+    <div class="container">
+      <div class="section-title">
+        <h2>كل المميزات</h2>
+        <p>كل ما يحتاجه الطالب في تطبيق واحد — بدون تعقيدات</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-robot"></i></div>
+          <h3>المساعد الذكي <span class="new-badge"><i class="fa-solid fa-star"></i> جديد</span></h3>
+          <p>اشرح لك أي درس أو حل أي مسألة بالعربية، بخطوات بسيطة وواضحة — مدعوم بالذكاء الاصطناعي.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+          <h3>جدول الدروس <span class="new-badge"><i class="fa-solid fa-star"></i> جديد</span></h3>
+          <p>جدول منفصل للدروس الخصوصية أو الإضافية، مع تنبيه قبل كل درس حسب رغبتك.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-file-pen"></i></div>
+          <h3>قسم الامتحانات <span class="new-badge"><i class="fa-solid fa-star"></i> جديد</span></h3>
+          <p>تابع مواعيد امتحاناتك مع صور وتفاصيل كاملة — يتم تحديثها تلقائيًا من لوحة التحكم.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-music"></i></div>
+          <h3>أصوات رنين مخصصة</h3>
+          <p>اختر من بين عدة نغمات، وعاينها قبل الحفظ. يمكنك إضافة المزيد بسهولة.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-calendar-days"></i></div>
+          <h3>جدول مرن</h3>
+          <p>أضف حصصك الدراسية بعدد مرن (من 1 إلى 10 حصص)، وحدد أيام الدراسة والمدرس والفصل والملاحظات.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>منبهات حقيقية</h3>
+          <p>منبهات تعمل حتى عند إغلاق التطبيق أو قفل الهاتف. اختر الأيام، الصوت، والاهتزاز.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-bell"></i></div>
+          <h3>ربط المنبه بالجدول</h3>
+          <p>عند عمل المنبه، يظهر جدول اليوم كاملًا في الإشعار — تعرف حصصك قبل أن تبدأ يومك.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-globe"></i></div>
+          <h3>يعمل بدون إنترنت</h3>
+          <p>كل الوظائف الأساسية تعمل محليًا — بدون اتصال، بدون حساب، بدون خادم.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
+          <h3>خصوصية كاملة</h3>
+          <p>بياناتك محفوظة على جهازك فقط. لا نجمع أي معلومات ولا نرسلها لأي مكان.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-moon"></i></div>
+          <h3>وضعان فاتح وداكن</h3>
+          <p>اختر الوضع المريح لعينيك، أو دع التطبيق يتبع إعدادات جهازك تلقائيًا.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-user"></i></div>
+          <h3>ملف الطالب</h3>
+          <p>سجّل اسمك واسم مدرستك وصورتك — تظهر في الصفحة الرئيسية كبطاقة شخصية.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ قسم التحميل ═══════════════════ -->
+  <section id="download">
+    <div class="container">
+      <div class="download-section">
+        <div class="download-content">
+          <div class="download-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <h2>حمّل الإصدار 2.0.0 الآن</h2>
+          <p>التطبيق مجاني بالكامل، بدون إعلانات، وبدون حساب — حمّله وابدأ فورًا.</p>
+
+          <div class="download-buttons">
+            <a href="https://zip3.tempfilestorage.link/public/2026-10-16/1b4f8f5d-faa7-462d-88a3-f876a429e149/SchoolPulseV2.0.0.apk" class="download-btn download-btn-primary" download>
+              <i class="fa-solid fa-download"></i>
+              تحميل APK مباشر
+              <span class="new-badge" style="margin-right: 4px;">
+                <i class="fa-solid fa-star"></i>
+                V2.0.0
+              </span>
+            </a>
+
+            <a href="#" id="googlePlayBtn" class="download-btn download-btn-secondary">
+              <i class="fa-brands fa-google-play"></i>
+              Google Play
+            </a>
+          </div>
+
+          <div class="download-info">
+            <span><i class="fa-solid fa-box"></i> الحجم: ~57 MB</span>
+            <span><i class="fa-brands fa-android"></i> Android 7.0+</span>
+            <span><i class="fa-solid fa-unlock"></i> مجاني بالكامل</span>
+            <span><i class="fa-solid fa-wifi"></i> يعمل بدون إنترنت</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ عن التطبيق ═══════════════════ -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>عن التطبيق</h2>
+        <p>SchoolPulse — مساعد مدرسي يعمل بدون إنترنت</p>
+      </div>
+
+      <div class="developer" style="max-width: 720px; margin: 0 auto;">
+        <div class="dev-avatar">
+          <img src="icons/student.png" alt="SchoolPulse" class="dev-avatar-img">
+        </div>
+        <h3>SchoolPulse</h3>
+        <p style="font-size: 16px; line-height: 1.9; margin-top: 20px;">
+          تطبيق مساعد مدرسي مصمم للطلاب، يساعدهم على تنظيم جدول المدرسة،
+          ضبط منبهاتهم اليومية، واستقبال تنبيهات ذكية تحتوي على جدول اليوم
+          — بالإضافة إلى <strong>مساعد ذكي بالذكاء الاصطناعي</strong> لشرح الدروس،
+          و<strong>جدول دروس منفصل</strong>، و<strong>قسم امتحانات</strong> محدّث تلقائيًا.
+        </p>
+
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 28px;">
+          <div style="padding: 10px 20px; border-radius: 12px; background: rgba(37, 99, 235, 0.15); color: #60A5FA; font-weight: 600; font-size: 14px;">الإصدار 2.0.0</div>
+          <div style="padding: 10px 20px; border-radius: 12px; background: rgba(124, 58, 237, 0.15); color: #A78BFA; font-weight: 600; font-size: 14px;">Android</div>
+          <div style="padding: 10px 20px; border-radius: 12px; background: rgba(37, 99, 235, 0.15); color: #60A5FA; font-weight: 600; font-size: 14px;">Offline-First</div>
+          <div style="padding: 10px 20px; border-radius: 12px; background: rgba(16, 185, 129, 0.15); color: #6EE7B7; font-weight: 600; font-size: 14px;">AI Powered</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ عن المطور ═══════════════════ -->
+  <section id="developer">
+    <div class="container">
+      <div class="section-title">
+        <h2>عن المطور</h2>
+        <p>من صنع مطوّر شغوف بتطوير التطبيقات المفيدة</p>
+      </div>
+
+      <div class="developer" style="max-width: 600px; margin: 0 auto;">
+        <div class="dev-avatar">
+          <img src="icons/dev-icon.png" alt="Mohamed Hany" class="dev-avatar-img">
+        </div>
+        <h3>Mohamed Hany</h3>
+        <p>مطوّر تطبيقات ويب، سطح مكتب، هاتف محمول</p>
+
+        <div class="contacts">
+          <a href="tel:01553308975" class="contact-btn">
+            <i class="fa-solid fa-phone"></i> 01553308975
+          </a>
+          <a href="tel:01553308947" class="contact-btn">
+            <i class="fa-solid fa-phone"></i> 01553308947
+          </a>
+        </div>
+
+        <div class="copyright">
+          © 2026 Mohamed Hany. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ Footer ═══════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <img src="icons/icon.png" alt="SchoolPulse" class="footer-logo-img">
+        <span>SchoolPulse</span>
+      </div>
+      <p>مساعدك المدرسي الذكي — الإصدار 2.0.0</p>
+      <p style="margin-top: 12px; font-size: 13px;">
+        © 2026 Mohamed Hany. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════ Toast ═══════════════════ -->
+  <div class="toast-container" id="toast">
+    <div class="toast-icon"><i class="fa-solid fa-rocket"></i></div>
+    <div class="toast-content">
+      <div class="toast-title">قريبًا على Google Play</div>
+      <div class="toast-message">التطبيق لم يُنشر بعد — ترقّب الإطلاق قريبًا!</div>
+    </div>
+    <button class="toast-close" id="toastClose" aria-label="إغلاق">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+</div><!-- /main-site -->
+
 <script>
-  // ─── تبديل الوضع الفاتح/الداكن ───
-  const themeToggle = document.getElementById('themeToggle');
-  const body = document.body;
-  const toast = document.getElementById('toast');
-  const toastClose = document.getElementById('toastClose');
-  const googlePlayBtn = document.getElementById('googlePlayBtn');
-  let toastTimeout;
+  // ═══════════════════════════════════════════════════════
+  //              Main Site Logic
+  // ═══════════════════════════════════════════════════════
+  (() => {
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const toast = document.getElementById('toast');
+    const toastClose = document.getElementById('toastClose');
+    const googlePlayBtn = document.getElementById('googlePlayBtn');
+    let toastTimeout;
 
-  // قراءة التفضيل المحفوظ (الافتراضي داكن)
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  body.setAttribute('data-theme', savedTheme);
-  updateThemeIcon(savedTheme);
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    body.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
 
-  function updateThemeIcon(theme) {
-    themeToggle.innerHTML = theme === 'dark'
-      ? '<i class="fa-solid fa-sun"></i>'
-      : '<i class="fa-solid fa-moon"></i>';
-  }
+    function updateThemeIcon(theme) {
+      themeToggle.innerHTML = theme === 'dark'
+        ? '<i class="fa-solid fa-sun"></i>'
+        : '<i class="fa-solid fa-moon"></i>';
+    }
 
-  themeToggle.addEventListener('click', () => {
-    const current = body.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    body.setAttribute('data-theme', next);
-    updateThemeIcon(next);
-    localStorage.setItem('theme', next);
-  });
+    themeToggle.addEventListener('click', () => {
+      const current = body.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', next);
+      updateThemeIcon(next);
+      localStorage.setItem('theme', next);
+    });
 
-  // ─── ظهور العناصر عند التمرير ───
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('.feature-card, .developer, .download-section, .new-item').forEach((el) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+      observer.observe(el);
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (!href || href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
-    },
-    { threshold: 0.1 }
-  );
+    });
 
-  document.querySelectorAll('.feature-card, .developer, .download-section').forEach((el) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
-    observer.observe(el);
-  });
+    function showToast() {
+      clearTimeout(toastTimeout);
+      toast.classList.add('show');
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 4000);
+    }
 
-  // ─── تمرير سلس للروابط الداخلية ───
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
+    function hideToast() {
+      clearTimeout(toastTimeout);
+      toast.classList.remove('show');
+    }
 
-      if (!href || href === '#') return;
-
+    googlePlayBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      showToast();
+    });
+
+    toastClose.addEventListener('click', hideToast);
+
+    document.addEventListener('click', (e) => {
+      if (!toast.contains(e.target) && e.target !== googlePlayBtn) {
+        hideToast();
       }
     });
-  });
-  // ═══════════════════ Toast Notification ═══════════════════
 
-  function showToast() {
-    clearTimeout(toastTimeout);
-    toast.classList.add('show');
-    toastTimeout = setTimeout(() => {
-      toast.classList.remove('show');
-    }, 4000);
-  }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') hideToast();
+    });
+  })();
 
-  function hideToast() {
-    clearTimeout(toastTimeout);
-    toast.classList.remove('show');
-  }
+  // ═══════════════════════════════════════════════════════
+  //              Intro 3D Sequence
+  // ═══════════════════════════════════════════════════════
+  (() => {
+    const root = document.getElementById('introScreen');
+    const fly = document.getElementById('introFly');
+    const camera = document.getElementById('introCamera');
+    const tilt = document.getElementById('introTilt');
+    const title = document.getElementById('introTitle');
+    const flash = document.getElementById('introFlash');
+    const mainSite = document.getElementById('mainSite');
 
-  googlePlayBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    showToast();
-  });
+    const CFG = {
+      text: 'SchoolPulse',
+      holdMs: 250,
+      depth: 46,
+      mobileBp: 640,
+      tilt: { scrollX: 18, scrollY: 9, pointerX: 8, pointerY: 12, smooth: 0.08 },
+      approachMs: 1150,
+      farZ: 2000,
+      impactZ: 360,
+      camera: {
+        ms: 950,
+        amp: 18,
+        rot: 3,
+        punch: 60,
+        flipDeg: 180,
+        tiltX: 12,
+        frames: 18
+      },
+      shards: { cols: 8, rows: 8, colsM: 4, rowsM: 4 },
+      explode: {
+        scatterMs: 520,
+        gatherMs: 850,
+        reach: 0.42,
+        zMin: -320,
+        zMax: 160
+      },
+      letters: {
+        start: 280,
+        stagger: 45,
+        flightMs: 850,
+        farZ: 1300,
+        spread: 420,
+        spin: 360
+      },
+      holdAfterDoneMs: 1100  // وقت قصير لظهور الشعار قبل فتح الموقع
+    };
 
-  toastClose.addEventListener('click', hideToast);
+    const rand = (a, b) => a + Math.random() * (b - a);
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ease = t => t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
 
-  document.addEventListener('click', (e) => {
-    if (!toast.contains(e.target) && e.target !== googlePlayBtn) {
-      hideToast();
+    // سُمك البطاقة
+    const nL = Math.max(2, Math.round(CFG.depth / 3));
+    for (let i = 0; i < nL; i++) {
+      const l = document.createElement('div');
+      l.className = 'sp3d__layer';
+      l.style.transform = `translateZ(${-CFG.depth / 2 + (i + .5) * CFG.depth / nL}px)`;
+      tilt.insertBefore(l, tilt.firstChild);
     }
-  });
+    root.querySelector('.sp3d__face--front').style.transform = `translateZ(${CFG.depth / 2}px)`;
+    root.querySelector('.sp3d__face--back').style.transform = `translateZ(${-CFG.depth / 2}px) rotateY(180deg)`;
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') hideToast();
-  });
+    // الحروف
+    const chars = [...CFG.text].map(ch => {
+      const s = document.createElement('span');
+      s.className = 'sp3d__ch';
+      s.textContent = ch;
+      s.setAttribute('aria-hidden', 'true');
+      title.appendChild(s);
+      return s;
+    });
+
+    // حالة الـ tilt
+    let rx = 0, ry = 0, px = 0, py = 0, tiltOn = true, running = false, raf = 0;
+    function frame() {
+      if (!running) return;
+      const r = root.getBoundingClientRect();
+      const vh = innerHeight;
+      const T = CFG.tilt;
+      const p = Math.max(-1, Math.min(1, ((r.top + r.height / 2) - vh / 2) / (vh / 2 + r.height / 2)));
+      const trx = tiltOn ? p * T.scrollX - py * T.pointerX : 0;
+      const tr_y = tiltOn ? px * T.pointerY + p * T.scrollY : 0;
+      rx += (trx - rx) * T.smooth;
+      ry += (tr_y - ry) * T.smooth;
+      root.style.setProperty('--rx', rx.toFixed(2) + 'deg');
+      root.style.setProperty('--ry', ry.toFixed(2) + 'deg');
+      root.style.setProperty('--sx', ry.toFixed(2));
+      raf = requestAnimationFrame(frame);
+    }
+
+    const setRunning = on => {
+      if (on && !running) { running = true; frame(); }
+      else if (!on) { running = false; cancelAnimationFrame(raf); }
+    };
+
+    document.addEventListener('pointermove', e => {
+      const r = root.getBoundingClientRect();
+      px = (e.clientX - r.left) / r.width * 2 - 1;
+      py = (e.clientY - r.top) / r.height * 2 - 1;
+    });
+    document.addEventListener('pointerleave', () => { px = py = 0; });
+
+    function camKeyframes() {
+      const C = CFG.camera, out = [], r = () => Math.random() * 2 - 1;
+      for (let i = 0; i <= C.frames; i++) {
+        const t = i / C.frames, k = Math.pow(1 - t, 2);
+        const roll = C.flipDeg * ease(t);
+        const pitch = Math.sin(t * Math.PI) * C.tiltX;
+        out.push({
+          offset: t,
+          transform: `translate3d(${r() * C.amp * k}px,${r() * C.amp * k}px,${C.punch * k}px) rotateX(${pitch}deg) rotateZ(${roll + r() * C.rot * k}deg)`
+        });
+      }
+      out[0].transform = 'translate3d(0,0,0) rotateX(0deg) rotateZ(0deg)';
+      out[C.frames].transform = `translate3d(0,0,0) rotateX(0deg) rotateZ(${C.flipDeg}deg)`;
+      return out;
+    }
+
+    async function play() {
+      reset();
+      setRunning(true);
+
+      const a = fly.animate([
+        { transform: `translate3d(0,0,${-CFG.farZ}px) rotateZ(-28deg)`, opacity: 0 },
+        { opacity: 1, offset: .25 },
+        { transform: `translate3d(0,0,${CFG.impactZ}px) rotateZ(0deg)`, opacity: 1 }
+      ], {
+        duration: CFG.approachMs,
+        easing: 'cubic-bezier(.55,0,.9,.5)',
+        fill: 'forwards'
+      });
+
+      try { await a.finished; } catch (e) { return; }
+      impact();
+    }
+
+    async function impact() {
+      const E = CFG.explode, L = CFG.letters, S = CFG.shards;
+      const W = fly.offsetWidth, H = fly.offsetHeight;
+      const small = innerWidth < CFG.mobileBp;
+      const cols = small ? S.colsM : S.cols;
+      const rows = small ? S.rowsM : S.rows;
+      const tw = W / cols, th = H / rows;
+      const rxNow = rx, ryNow = ry;
+
+      tiltOn = false;
+      fly.style.visibility = 'hidden';
+
+      const titleW = title.offsetWidth;
+      const fs = parseFloat(getComputedStyle(title).fontSize);
+      const targets = chars.map(c => c.offsetLeft + c.offsetWidth / 2 - titleW / 2);
+
+      const box = document.createElement('div');
+      box.className = 'sp3d__shards';
+      const startT = `translateZ(${CFG.impactZ}px) rotateX(${rxNow}deg) rotateY(${ryNow}deg)`;
+      box.style.transform = startT;
+      root.querySelector('.sp3d__scene').appendChild(box);
+
+      box.animate([
+        { transform: startT },
+        { transform: 'translateZ(0px) rotateX(0deg) rotateY(0deg)' }
+      ], {
+        duration: E.scatterMs,
+        easing: 'cubic-bezier(.2,.8,.2,1)',
+        fill: 'forwards'
+      });
+
+      const reach = Math.min(innerWidth, innerHeight) * E.reach;
+      const j = () => rand(0, 18);
+      const poly = () => `polygon(${j()}% ${j()}%,${100 - j()}% ${j()}%,${100 - j()}% ${100 - j()}%,${j()}% ${100 - j()}%)`;
+      const rot = d => `rotateX(${rand(-d, d)}deg) rotateY(${rand(-d, d)}deg) rotateZ(${rand(-d, d)}deg)`;
+
+      const order = [];
+      for (let i = 0; i < rows * cols; i++) order.push(i % chars.length);
+      order.sort(() => Math.random() - .5);
+
+      let n = 0;
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++, n++) {
+          const el = document.createElement('div');
+          el.className = 'sp3d__shard';
+          el.style.cssText =
+            `width:${tw}px;height:${th}px;margin:${-th / 2}px 0 0 ${-tw / 2}px;` +
+            `background-size:${W}px ${H}px;background-position:${-c * tw}px ${-r * th}px;clip-path:${poly()}`;
+          box.appendChild(el);
+
+          const x = (c + .5) * tw - W / 2;
+          const y = (r + .5) * th - H / 2;
+          const ang = Math.atan2(y, x) + rand(-.5, .5);
+          const dist = reach * rand(.4, 1);
+          const sx = x + Math.cos(ang) * dist;
+          const sy = y + Math.sin(ang) * dist;
+          const sz = rand(E.zMin, E.zMax);
+          const scat = `translate3d(${sx}px,${sy}px,${sz}px) ${rot(300)} scale(1)`;
+          const li = order[n];
+          const tx = targets[li] + rand(-fs * .2, fs * .2);
+          const ty = rand(-fs * .3, fs * .3);
+
+          el.animate([
+            { transform: `translate3d(${x}px,${y}px,0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1)` },
+            { transform: scat }
+          ], {
+            duration: E.scatterMs,
+            easing: 'cubic-bezier(.15,.8,.25,1)',
+            fill: 'forwards'
+          });
+
+          el.animate([
+            { transform: scat, opacity: 1 },
+            { transform: `translate3d(${tx}px,${ty}px,0) ${rot(200)} scale(.15)`, opacity: 0 }
+          ], {
+            duration: E.gatherMs,
+            delay: E.scatterMs + li * L.stagger * .8 + rand(0, 100),
+            easing: 'cubic-bezier(.6,0,.3,1)',
+            fill: 'both'
+          });
+        }
+      }
+
+      camera.animate(camKeyframes(), {
+        duration: CFG.camera.ms,
+        easing: 'linear'
+      });
+
+      flash.animate([
+        { opacity: 0 },
+        { opacity: .95, offset: .12 },
+        { opacity: 0 }
+      ], { duration: 520, easing: 'ease-out' });
+
+      const idt = 'translate3d(0px,0px,0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1)';
+      const anims = chars.map((ch, i) => ch.animate([
+        {
+          transform: `translate3d(${rand(-L.spread, L.spread)}px,${rand(-L.spread * .6, L.spread * .6)}px,${-L.farZ}px) ` +
+                     `${rot(L.spin)} scale(.5)`,
+          opacity: 0
+        },
+        { opacity: 1, offset: .35 },
+        { transform: idt, opacity: 1 }
+      ], {
+        duration: L.flightMs,
+        delay: L.start + i * L.stagger,
+        easing: 'cubic-bezier(.16,1.12,.3,1)',
+        fill: 'both'
+      }));
+
+      await Promise.allSettled(anims.map(a => a.finished));
+      root.classList.add('is-done');
+
+      // ═══════════════════════════════════════════
+      //        الانتقال التلقائي للموقع بعد النص
+      // ═══════════════════════════════════════════
+      setTimeout(() => {
+        enterSite();
+      }, CFG.holdAfterDoneMs);
+    }
+
+    function reset() {
+      root.querySelectorAll('.sp3d__shards').forEach(n => n.remove());
+      fly.style.visibility = '';
+      root.classList.remove('is-done');
+      tiltOn = true;
+    }
+
+    function enterSite() {
+      root.classList.add('hidden');
+      document.body.classList.remove('intro-active');
+      mainSite.style.transition = 'opacity 1.2s ease-out';
+      mainSite.style.opacity = '1';
+
+      setTimeout(() => {
+        root.style.display = 'none';
+      }, 1200);
+    }
+
+    // بدء التسلسل بعد فترة قصيرة
+    if (reduce) {
+      // في حالة تقليل الحركة، انتقل مباشرة
+      setTimeout(enterSite, 500);
+    } else {
+      setTimeout(play, CFG.holdMs);
+    }
+  })();
 </script>
 
 </body>
